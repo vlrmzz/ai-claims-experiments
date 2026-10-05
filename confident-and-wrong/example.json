@@ -1,0 +1,21 @@
+{
+ "events": [
+  "login_fail",
+  "login_ok",
+  "http_200",
+  "login_fail",
+  "dns_query"
+ ],
+ "options": [
+  "brute_force",
+  "credential_stuffing",
+  "phishing",
+  "benign"
+ ],
+ "posterior": [
+  0.6327,
+  0.3442,
+  0.0048,
+  0.0184
+ ]
+}
