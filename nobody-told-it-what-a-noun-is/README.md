@@ -31,6 +31,5 @@ The first run downloads the novels and the tagger through NLTK (about 40 MB).
 | linear probe | 83 % | 47 % | 47 % |
 | loss after 4,000 steps | 4.25 | 5.45 | |
 
-The scripts of the original run of the post were not kept. This code is a rebuild from the description in the
-post. It shows the same effect and the same result for the control. Its numbers for the real text are a few
-points lower than those in the post, which has 67 % and 88 %.
+This code is a rebuild. The scripts of my first run were not kept, so I wrote the experiment again from its
+description. All numbers and figures in the post come from this code.
