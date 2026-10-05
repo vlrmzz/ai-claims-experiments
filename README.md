@@ -41,3 +41,8 @@ jupyter notebook
   without running anything.
 
 If a number in a post does not agree with what you get, tell me: vlrmzz.github.io has my contact details.
+
+## Licence
+
+The code is under the [MIT licence](LICENSE). Two result files in `confident-and-wrong/data/` are copied
+from the [Laya](https://github.com/NandhaKishorM/laya) repository and stay under its Apache 2.0 licence.
