@@ -9,8 +9,10 @@ one experiment: the code, the results of the full run, and a notebook.
 | [`pixels-vs-tokens`](pixels-vs-tokens/) | Does a model that sees a scene learn more than a model that reads the same facts? | 1 minute | 1 hour |
 | [`confident-and-wrong`](confident-and-wrong/) | When can you trust the confidence a model reports? | 1 minute | 45 minutes |
 | [`nobody-told-it-what-a-noun-is`](nobody-told-it-what-a-noun-is/) | Does a model learn word classes when nobody teaches them? | 1 minute | 10 minutes |
+| [`agent-trace-failures`](agent-trace-failures/) | Can a decision model find the step where an AI agent failed? | saved results only | needs an API key |
 
-Times are for a laptop CPU. No GPU is necessary.
+Times are for a laptop CPU. No GPU is necessary. The last experiment calls a paid model, so its notebook shows the saved
+results and does not run the model again.
 
 ## Run a notebook
 
@@ -19,6 +21,7 @@ In your browser, with nothing to install:
 - [Open `pixels_vs_tokens.ipynb` in Colab](https://colab.research.google.com/github/vlrmzz/ai-claims-experiments/blob/main/pixels-vs-tokens/pixels_vs_tokens.ipynb)
 - [Open `confident_and_wrong.ipynb` in Colab](https://colab.research.google.com/github/vlrmzz/ai-claims-experiments/blob/main/confident-and-wrong/confident_and_wrong.ipynb)
 - [Open `nobody_told_it.ipynb` in Colab](https://colab.research.google.com/github/vlrmzz/ai-claims-experiments/blob/main/nobody-told-it-what-a-noun-is/nobody_told_it.ipynb)
+- [Open `agent_trace_failures.ipynb` in Colab](https://colab.research.google.com/github/vlrmzz/ai-claims-experiments/blob/main/agent-trace-failures/agent_trace_failures.ipynb)
 
 On your own machine (Python 3.10 or later):
 
