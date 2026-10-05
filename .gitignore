@@ -5,3 +5,4 @@ _out/
 figures/
 results_smoke.json
 .DS_Store
+fig-*.png
