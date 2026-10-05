@@ -1,0 +1,311 @@
+{
+ "runs": 159,
+ "pattern_accuracy": 0.5786163522012578,
+ "pattern_majority_baseline": 0.3081761006289308,
+ "per_pattern": {
+  "expected_violates_policy": {
+   "reference": 49,
+   "jev": 64,
+   "both": 44,
+   "precision": 0.6875,
+   "recall": 0.8979591836734694,
+   "auc": 0.9304267161410018
+  },
+  "expected_contradicts_data": {
+   "reference": 13,
+   "jev": 21,
+   "both": 11,
+   "precision": 0.5238095238095238,
+   "recall": 0.8461538461538461,
+   "auc": 0.8350895679662803
+  },
+  "script_underspecified": {
+   "reference": 14,
+   "jev": 21,
+   "both": 12,
+   "precision": 0.5714285714285714,
+   "recall": 0.8571428571428571,
+   "auc": 0.9788177339901478
+  },
+  "simulator_off_script": {
+   "reference": 39,
+   "jev": 9,
+   "both": 8,
+   "precision": 0.8888888888888888,
+   "recall": 0.20512820512820512,
+   "auc": 0.7101495726495727
+  },
+  "unrequested_offer_accepted": {
+   "reference": 20,
+   "jev": 11,
+   "both": 8,
+   "precision": 0.7272727272727273,
+   "recall": 0.4,
+   "auc": 0.8190647482014388
+  },
+  "write_without_check": {
+   "reference": 8,
+   "jev": 2,
+   "both": 2,
+   "precision": 1.0,
+   "recall": 0.25,
+   "auc": 0.8874172185430463
+  },
+  "rule_misapplied": {
+   "reference": 10,
+   "jev": 5,
+   "both": 2,
+   "precision": 0.4,
+   "recall": 0.2,
+   "auc": 0.8275167785234899
+  },
+  "other_agent_error": {
+   "reference": 6,
+   "jev": 26,
+   "both": 5,
+   "precision": 0.19230769230769232,
+   "recall": 0.8333333333333334,
+   "auc": 0.9095860566448801
+  }
+ },
+ "confusion": [
+  {
+   "reference": "expected_contradicts_data",
+   "jev": "expected_contradicts_data",
+   "runs": 11
+  },
+  {
+   "reference": "expected_contradicts_data",
+   "jev": "expected_violates_policy",
+   "runs": 1
+  },
+  {
+   "reference": "expected_contradicts_data",
+   "jev": "other_agent_error",
+   "runs": 1
+  },
+  {
+   "reference": "expected_violates_policy",
+   "jev": "expected_contradicts_data",
+   "runs": 4
+  },
+  {
+   "reference": "expected_violates_policy",
+   "jev": "expected_violates_policy",
+   "runs": 44
+  },
+  {
+   "reference": "expected_violates_policy",
+   "jev": "script_underspecified",
+   "runs": 1
+  },
+  {
+   "reference": "other_agent_error",
+   "jev": "expected_violates_policy",
+   "runs": 1
+  },
+  {
+   "reference": "other_agent_error",
+   "jev": "other_agent_error",
+   "runs": 5
+  },
+  {
+   "reference": "rule_misapplied",
+   "jev": "expected_violates_policy",
+   "runs": 4
+  },
+  {
+   "reference": "rule_misapplied",
+   "jev": "other_agent_error",
+   "runs": 3
+  },
+  {
+   "reference": "rule_misapplied",
+   "jev": "rule_misapplied",
+   "runs": 2
+  },
+  {
+   "reference": "rule_misapplied",
+   "jev": "unrequested_offer_accepted",
+   "runs": 1
+  },
+  {
+   "reference": "script_underspecified",
+   "jev": "expected_violates_policy",
+   "runs": 1
+  },
+  {
+   "reference": "script_underspecified",
+   "jev": "script_underspecified",
+   "runs": 12
+  },
+  {
+   "reference": "script_underspecified",
+   "jev": "simulator_off_script",
+   "runs": 1
+  },
+  {
+   "reference": "simulator_off_script",
+   "jev": "expected_contradicts_data",
+   "runs": 5
+  },
+  {
+   "reference": "simulator_off_script",
+   "jev": "expected_violates_policy",
+   "runs": 9
+  },
+  {
+   "reference": "simulator_off_script",
+   "jev": "other_agent_error",
+   "runs": 8
+  },
+  {
+   "reference": "simulator_off_script",
+   "jev": "script_underspecified",
+   "runs": 7
+  },
+  {
+   "reference": "simulator_off_script",
+   "jev": "simulator_off_script",
+   "runs": 8
+  },
+  {
+   "reference": "simulator_off_script",
+   "jev": "unrequested_offer_accepted",
+   "runs": 2
+  },
+  {
+   "reference": "unrequested_offer_accepted",
+   "jev": "expected_contradicts_data",
+   "runs": 1
+  },
+  {
+   "reference": "unrequested_offer_accepted",
+   "jev": "expected_violates_policy",
+   "runs": 4
+  },
+  {
+   "reference": "unrequested_offer_accepted",
+   "jev": "other_agent_error",
+   "runs": 6
+  },
+  {
+   "reference": "unrequested_offer_accepted",
+   "jev": "script_underspecified",
+   "runs": 1
+  },
+  {
+   "reference": "unrequested_offer_accepted",
+   "jev": "unrequested_offer_accepted",
+   "runs": 8
+  },
+  {
+   "reference": "write_without_check",
+   "jev": "other_agent_error",
+   "runs": 3
+  },
+  {
+   "reference": "write_without_check",
+   "jev": "rule_misapplied",
+   "runs": 3
+  },
+  {
+   "reference": "write_without_check",
+   "jev": "write_without_check",
+   "runs": 2
+  }
+ ],
+ "pattern_calibration": [
+  {
+   "bin": "0.0-0.5",
+   "n": 63,
+   "mean_probability": 0.3714285714285714,
+   "share_correct": 0.38095238095238093
+  },
+  {
+   "bin": "0.5-0.7",
+   "n": 49,
+   "mean_probability": 0.5877551020408164,
+   "share_correct": 0.5714285714285714
+  },
+  {
+   "bin": "0.7-0.9",
+   "n": 38,
+   "mean_probability": 0.7978947368421053,
+   "share_correct": 0.8157894736842105
+  },
+  {
+   "bin": "0.9-1.0",
+   "n": 9,
+   "mean_probability": 0.9266666666666666,
+   "share_correct": 1.0
+  }
+ ],
+ "fault_accuracy": 0.8176100628930818,
+ "fault_majority_baseline": 0.8050314465408805,
+ "fault_table": [
+  {
+   "reference": "agent",
+   "jev": "agent",
+   "runs": 10
+  },
+  {
+   "reference": "agent",
+   "jev": "benchmark",
+   "runs": 9
+  },
+  {
+   "reference": "benchmark",
+   "jev": "agent",
+   "runs": 8
+  },
+  {
+   "reference": "benchmark",
+   "jev": "benchmark",
+   "runs": 120
+  },
+  {
+   "reference": "both",
+   "jev": "agent",
+   "runs": 4
+  },
+  {
+   "reference": "both",
+   "jev": "benchmark",
+   "runs": 8
+  }
+ ],
+ "fault_auc_vs_reference": 0.8206905241935484,
+ "revised_runs": 114,
+ "fault_auc_vs_revisions": {
+  "jev": 0.7123781676413256,
+  "reference": 0.5964912280701754
+ },
+ "trial_consistency": {
+  "tasks_with_several_failed_runs": 40,
+  "reference_same_pattern": 32,
+  "jev_same_pattern": 20
+ },
+ "blind": {
+  "unrequested_offer_accepted": {
+   "graded_auc": 0.8190647482014388,
+   "blind_auc": 0.7591726618705036,
+   "reference": 20
+  },
+  "write_without_check": {
+   "graded_auc": 0.8874172185430463,
+   "blind_auc": 0.9457781456953642,
+   "reference": 8
+  },
+  "rule_misapplied": {
+   "graded_auc": 0.8275167785234899,
+   "blind_auc": 0.6996644295302014,
+   "reference": 10
+  },
+  "other_agent_error": {
+   "graded_auc": 0.9095860566448801,
+   "blind_auc": 0.6127450980392157,
+   "reference": 6
+  }
+ }
+}

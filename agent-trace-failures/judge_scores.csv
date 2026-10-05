@@ -1,0 +1,131 @@
+dataset,id,long,human_step,judge_step,jev_step,judge_confidence,human_agent,judge_agent,human_category,judge_category
+agentrx_tau,2,False,7,7,9,0.8,,,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_tau,4,False,15,15,43,0.7,,,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_tau,12,False,19,19,19,0.7,,,Instruction/Plan Adherence Failure,Instruction/Plan Adherence Failure
+agentrx_tau,20,False,21,41,61,0.35,,,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_tau,31,False,31,29,31,0.45,,,Intent-Plan Misalignment,Misinterpretation of Tool Output
+agentrx_tau,32,False,11,11,11,0.6,,,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_tau,34,False,17,29,13,0.4,,,Invalid Invocation,Instruction/Plan Adherence Failure
+agentrx_tau,38,False,37,37,5,0.35,,,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_tau,47,False,19,19,19,0.45,,,Intent Not Supported,Instruction/Plan Adherence Failure
+agentrx_tau,55,False,32,27,27,0.4,,,Underspecified User Intent,Instruction/Plan Adherence Failure
+agentrx_tau,59,False,14,23,17,0.4,,,Underspecified User Intent,Instruction/Plan Adherence Failure
+agentrx_tau,63,False,32,33,25,0.3,,,Underspecified User Intent,Intent Not Supported
+agentrx_tau,71,False,24,27,27,0.55,,,Underspecified User Intent,Instruction/Plan Adherence Failure
+agentrx_tau,72,False,21,21,21,0.6,,,Intent-Plan Misalignment,Instruction/Plan Adherence Failure
+agentrx_tau,74,False,21,21,21,0.3,,,Instruction/Plan Adherence Failure,Instruction/Plan Adherence Failure
+agentrx_tau,80,False,26,25,26,0.35,,,System Failure,Invention of New Information
+agentrx_tau,82,False,20,21,23,0.3,,,Underspecified User Intent,Underspecified User Intent
+agentrx_tau,87,False,37,29,19,0.35,,,Intent-Plan Misalignment,Misinterpretation of Tool Output
+agentrx_tau,91,False,34,21,39,0.25,,,Underspecified User Intent,Instruction/Plan Adherence Failure
+agentrx_tau,98,False,21,21,21,0.5,,,Intent-Plan Misalignment,Intent-Plan Misalignment
+agentrx_tau,105,False,43,39,39,0.45,,,Intent Not Supported,Instruction/Plan Adherence Failure
+agentrx_magentic,c7afe00869f98cf363fd83677ac41757ed5e57f03eacc3d1304feb0a92084bd1,True,10,10,89,0.3,Orchestrator,Orchestrator,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_magentic,ebbc1f13-d24d-40df-9068-adcf735b4240,True,17,17,83,0.4,WebSurfer,WebSurfer,Guardrails Triggered,Guardrails Triggered
+agentrx_magentic,52f7224e9c79431e7926afe317782711a0028750693e7456cde22ef6f4bd8bd5,False,11,10,21,0.35,Orchestrator,Orchestrator,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_magentic,08cae58d-4084-4616-b6dd-dd6534e4825b,True,5,3,69,0.2,WebSurfer,Orchestrator,Instruction/Plan Adherence Failure,Intent-Plan Misalignment
+agentrx_magentic,8ad84bd6fe38481ba49e7ad1f6fbd43219a999074e5c6fc940003281f55ec65b,False,10,10,44,0.25,Orchestrator,Orchestrator,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_magentic,114d5fd0-e2ae-4b6d-a65a-870da2d19c08,False,19,17,33,0.3,Orchestrator,FileSurfer,Intent Not Supported,Invention of New Information
+agentrx_magentic,2ddae3b7a208e3c25f14d82d7a1faaaa1832fbf950b4dac345e755c4c361f294,True,13,40,118,0.2,WebSurfer,WebSurfer,Instruction/Plan Adherence Failure,Guardrails Triggered
+agentrx_magentic,0ec4371851b96837b0a81b3dd3df401415061bb532fbafeb4609f3337c358508,False,10,10,30,0.3,Orchestrator,Orchestrator,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_magentic,5d0080cb-90d7-4712-bc33-848150e917d3,False,15,36,50,0.22,Orchestrator,FileSurfer,Invention of New Information,Invention of New Information
+agentrx_magentic,6e3be83d1949fa52cba03fb1ce4b5b3bf7e37a83fd7d67694b10b2e439d90cf8,False,10,13,29,0.3,Orchestrator,WebSurfer,Misinterpretation of Tool Output,Instruction/Plan Adherence Failure
+agentrx_magentic,16d825ff-1623-4176-a5b5-42e0f5c2b0ac,True,5,53,93,0.15,WebSurfer,Orchestrator,Instruction/Plan Adherence Failure,Intent-Plan Misalignment
+agentrx_magentic,557e78eceec08ca8b0da5f9fdaca6e1c7ec6140a8ce600983ee716327dab005e,False,14,10,32,0.3,Orchestrator,Orchestrator,Misinterpretation of Tool Output,Misinterpretation of Tool Output
+agentrx_magentic,a3fbeb63-0e8c-4a11-bff6-0e3b484c3e9c,False,21,21,20,0.3,Orchestrator,Orchestrator,Guardrails Triggered,Guardrails Triggered
+agentrx_magentic,42576abe-0deb-4869-8c63-225c2d75a95a,False,2,2,2,0.75,Orchestrator,Orchestrator,Misinterpretation of Tool Output,Intent-Plan Misalignment
+agentrx_magentic,42d4198c-5895-4f0a-b0c0-424a66465d83,False,19,2,20,0.3,Orchestrator,Orchestrator,Misinterpretation of Tool Output,Intent-Plan Misalignment
+agentrx_magentic,72e110e7-464c-453c-a309-90a95aed6538,False,9,9,9,0.55,WebSurfer,WebSurfer,Guardrails Triggered,Guardrails Triggered
+agentrx_magentic,9baaa267c95f9d8b75741ee9169c50563d297cfa592c20deaffd30dbc5984c74,False,21,29,53,0.2,WebSurfer,WebSurfer,Instruction/Plan Adherence Failure,Instruction/Plan Adherence Failure
+agentrx_magentic,73c1b9fe-ee1d-4cf4-96ca-35c08f97b054,False,13,13,13,0.55,WebSurfer,WebSurfer,Guardrails Triggered,Guardrails Triggered
+agentrx_magentic,56137764-b4e0-45b8-9c52-1866420c3df5,False,5,5,5,0.6,WebSurfer,WebSurfer,Guardrails Triggered,Guardrails Triggered
+agentrx_magentic,57d9dc6935e8a40b02e7f8ec81768fe70e68a0c05f6866927c9fda38db38a486,False,31,29,31,0.3,Orchestrator,Orchestrator,Intent-Plan Misalignment,Instruction/Plan Adherence Failure
+agentrx_magentic,f88066d274e265edd6cd9d61cd80a41accb3a14baf2297652fdd05cdf716d455,False,17,9,5,0.3,WebSurfer,WebSurfer,System Failure,Instruction/Plan Adherence Failure
+whowhen_hand,5f982798-16b9-4051-ab57-cfc7ebdb2a91,True,3,39,66,0.25,WebSurfer,WebSurfer,,
+whowhen_hand,ebbc1f13-d24d-40df-9068-adcf735b4240,True,8,29,50,0.2,WebSurfer,Orchestrator,,
+whowhen_hand,52f7224e9c79431e7926afe317782711a0028750693e7456cde22ef6f4bd8bd5,False,15,9,20,0.35,Orchestrator,Orchestrator,,
+whowhen_hand,3af8028c2a59e28ca88baff0e6d91f2a9f170c5ef91003f1c8406755a2760ad4,False,12,9,16,0.45,WebSurfer,Orchestrator,,
+whowhen_hand,e6bc98089608217e45b6956a46518fe3cce64a799b3ac43c6974c449ae14c408,False,5,5,5,0.6,Orchestrator,Orchestrator,,
+whowhen_hand,8b3379c0-0981-4f5b-8407-6444610cb212,False,4,11,58,0.35,WebSurfer,WebSurfer,,
+whowhen_hand,840bfca7-4f7b-481a-8794-c560c340185d,False,4,12,24,0.3,WebSurfer,WebSurfer,,
+whowhen_hand,5d0080cb-90d7-4712-bc33-848150e917d3,False,4,16,49,0.25,WebSurfer,WebSurfer,,
+whowhen_hand,6e3be83d1949fa52cba03fb1ce4b5b3bf7e37a83fd7d67694b10b2e439d90cf8,False,12,12,12,0.35,WebSurfer,WebSurfer,,
+whowhen_hand,797f7a5b65ca28b7e7156e7db1e9f117bd4a021de0cd512bfdbb0be897d89eab,True,5,5,112,0.2,WebSurfer,WebSurfer,,
+whowhen_hand,557e78eceec08ca8b0da5f9fdaca6e1c7ec6140a8ce600983ee716327dab005e,False,8,8,31,0.35,WebSurfer,WebSurfer,,
+whowhen_hand,2dfc4c37-fec1-4518-84a7-10095d30ad75,False,16,12,12,0.6,Assistant,WebSurfer,,
+whowhen_hand,42576abe-0deb-4869-8c63-225c2d75a95a,False,1,1,1,0.85,Orchestrator,Orchestrator,,
+whowhen_hand,14569e28-c88c-43e4-8c32-097d35b9a67d,False,12,12,12,0.7,WebSurfer,Assistant,,
+whowhen_hand,72e110e7-464c-453c-a309-90a95aed6538,False,8,8,8,0.35,WebSurfer,WebSurfer,,
+whowhen_hand,b36ef2d8f2643b80e74a44ce3403f674ecb2aed7fd36afeaa289061a59feef92,False,4,5,20,0.25,WebSurfer,Orchestrator,,
+whowhen_hand,9e31099fffa6a3891c94934fd4fc2f3f522d51c1904ff3561f3a10e4bf245821,True,8,16,116,0.2,WebSurfer,WebSurfer,,
+whowhen_hand,b816bfce-3d80-4913-a07d-69b752ce6377,False,4,16,17,0.3,FileSurfer,Orchestrator,,
+whowhen_hand,57d9dc6935e8a40b02e7f8ec81768fe70e68a0c05f6866927c9fda38db38a486,False,16,4,30,0.35,WebSurfer,WebSurfer,,
+whowhen_hand,a9074997e698f912b9e751779ea19c1e92fa148404e90e0ae997acea3f9559b0,True,3,8,51,0.3,Orchestrator,WebSurfer,,
+whowhen_hand,f88066d274e265edd6cd9d61cd80a41accb3a14baf2297652fdd05cdf716d455,False,8,8,4,0.3,WebSurfer,WebSurfer,,
+whowhen_hand,cca4776df3c73e7f9430a2e624aafad056b14322a0b7ca6c0c22b7e7f3f0890a,False,18,4,36,0.25,Orchestrator,WebSurfer,,
+whowhen_hand,8d46b8d6-b38a-47ff-ac74-cda14cf2d19b,False,14,28,28,0.4,Orchestrator,WebSurfer,,
+whowhen_hand,db4fd70a-2d37-40ea-873f-9433dc5e301f,False,12,12,12,0.45,Assistant,Assistant,,
+whowhen_hand,7673d772-ef80-4f0f-a602-1bf4485c9b43,False,29,24,29,0.5,Orchestrator,WebSurfer,,
+whowhen_hand,efc0f3a47e9ed2ecdbcc037c2093865fe6e39f4d413a5d1ccdc7357160a4606b,True,8,8,69,0.2,WebSurfer,WebSurfer,,
+whowhen_hand,ed58682d-bc52-4baa-9eb0-4eb81e1edacc,False,12,16,16,0.75,WebSurfer,WebSurfer,,
+whowhen_auto,4dbedc5e1a0205e14b7ff3ba89bce3060dab15d0ada3b7e1351a6f2aa8287aec,False,1,1,1,0.7,Verification_Expert,Verification_Expert,,
+whowhen_auto,f3917a3d-1d17-4ee2-90c5-683b072218fe,False,0,5,5,0.4,WebServing_Expert,Verification_Expert,,
+whowhen_auto,a1e91b78-d3d8-4675-bb8d-62741b4b68a6,False,0,6,6,0.45,YouTubeDownload_Expert,ResultVerification_Expert,,
+whowhen_auto,46719c30-f4c3-4cad-be07-d5cb21eee6bb,False,5,5,5,0.7,AcademicPublication_Expert,AcademicPublication_Expert,,
+whowhen_auto,557e78eceec08ca8b0da5f9fdaca6e1c7ec6140a8ce600983ee716327dab005e,False,3,7,9,0.3,BingAPI_Expert,Accessibility_Expert,,
+whowhen_auto,08f3a05f-5947-4089-a4c4-d4bcfaa6b7a0,False,3,1,1,0.45,Verification_Expert,NumericalAlgorithms_Expert,,
+whowhen_auto,99da66d8af02491f98b98c56b26c709e773b5a2ad945fb280375951ba600de09,False,2,1,1,0.85,Verification_Expert,AnalyticalReasoning_Expert,,
+whowhen_auto,a0c07678-e491-4bbc-8f0b-07405144218f,False,5,5,5,0.3,Validation_Expert,Validation_Expert,,
+whowhen_auto,ed58682d-bc52-4baa-9eb0-4eb81e1edacc,False,0,1,1,0.8,Lyrics_Expert,MusicHistorian_Expert,,
+whowhen_auto,52f7224e9c79431e7926afe317782711a0028750693e7456cde22ef6f4bd8bd5,False,1,1,1,0.7,Filmography_Expert,Filmography_Expert,,
+whowhen_auto,6b06d186921b8b390c65aebd0d16f09f60a47d2f1288ebe36953f734e84c0a3c,False,1,3,1,0.45,Verification_Expert,Verification_Expert,,
+whowhen_auto,d1af70ea-a9a4-421a-b9cc-94b5e02f1788,False,5,0,5,0.35,Validation_Expert,Validation_Expert,,
+whowhen_auto,2a649bb1-795f-4a01-b3be-9a01868dae73,False,0,0,0,0.4,PythonDebugging_Expert,PythonDebugging_Expert,,
+whowhen_auto,27d5d136-8563-469e-92bf-fd103c28b57c,False,0,5,5,0.4,PythonDebugging_Expert,PythonDebugging_Expert,,
+whowhen_auto,6e3be83d1949fa52cba03fb1ce4b5b3bf7e37a83fd7d67694b10b2e439d90cf8,False,5,3,2,0.35,MartialArts_Expert,NYC_Local_Expert,,
+whowhen_auto,f88066d274e265edd6cd9d61cd80a41accb3a14baf2297652fdd05cdf716d455,False,7,7,7,0.6,Reviews_Expert,Reviews_Expert,,
+whowhen_auto,b36ef2d8f2643b80e74a44ce3403f674ecb2aed7fd36afeaa289061a59feef92,False,6,3,3,0.4,Verification_Expert,Fitness_Expert,,
+whowhen_auto,ecbc4f94-95a3-4cc7-b255-6741a458a625,False,1,3,7,0.6,DataExtraction_Expert,DataExtraction_Expert,,
+whowhen_auto,08cae58d-4084-4616-b6dd-dd6534e4825b,False,0,2,0,0.3,FinancialData_Expert,DataValidation_Expert,,
+whowhen_auto,8b3379c0-0981-4f5b-8407-6444610cb212,False,4,1,1,0.85,Verification_Expert,VideoContentAnalysis_Expert,,
+whowhen_auto,99c9cc74-fdc8-46c6-8f8d-3ce2d3bfeea3,False,3,2,2,0.8,Culinary_Expert,TranscriptionVerification_Expert,,
+whowhen_auto,87c610df-bef7-4932-b950-1d83ef4e282b,False,1,1,1,0.9,BiblicalScholar_Expert,BiblicalScholar_Expert,,
+whowhen_auto,14569e28-c88c-43e4-8c32-097d35b9a67d,False,0,0,0,0.4,PythonDebugging_Expert,PythonDebugging_Expert,,
+whowhen_auto,4d51c4bf-4b0e-4f3d-897b-3f6687a7d9f2,False,0,0,5,0.4,Excel_Expert,Excel_Expert,,
+whowhen_auto,08c0b6e9-1b43-4c2e-ae55-4e3fce2c2715,False,4,2,4,0.75,FilmCritic_Expert,MovieProp_Expert,,
+whowhen_auto,6f224e7730ed027cbac73aebb1aea7f954053082041b02b19f4ff126a0a8a208,False,8,8,8,0.45,Research_Expert,Research_Expert,,
+whowhen_auto,cca4776df3c73e7f9430a2e624aafad056b14322a0b7ca6c0c22b7e7f3f0890a,False,8,2,8,0.4,Corporate_Governance_Expert,Corporate_Governance_Expert,,
+whowhen_auto,076c8171-9b3b-49b9-a477-244d2a532826,False,3,3,3,0.35,DataAnalysis_Expert,DataAnalysis_Expert,,
+whowhen_auto,cf106601-ab4f-4af9-b045-5295fe67b37d,False,2,2,2,0.8,Verification_Expert,Verification_Expert,,
+whowhen_auto,72e110e7-464c-453c-a309-90a95aed6538,False,0,2,6,0.3,Library_Database_Expert,NaturalLanguageProcessing_Expert,,
+whowhen_auto,0e9e85b8-52b9-4de4-b402-5f635ab9631f,False,8,7,8,0.45,DataVerification_Expert,Historian_Expert,,
+whowhen_auto,db4fd70a-2d37-40ea-873f-9433dc5e301f,False,1,1,1,0.85,Verification_Expert,Verification_Expert,,
+whowhen_auto,04a04a9b-226c-43fd-b319-d5e89743676f,False,1,1,1,0.7,PublicationData_Expert,PublicationData_Expert,,
+whowhen_auto,05407167-39ec-4d3a-a234-73a9120c325d,False,1,3,3,0.4,VideoContentAnalysis_Expert,VideoContentAnalysis_Expert,,
+whowhen_auto,4b6bb5f7-f634-410e-815d-e673ab7f8632,False,1,1,1,0.85,VideoAnalysis_Expert,VideoAnalysis_Expert,,
+whowhen_auto,929b45f34805280d77c61d1e093e3d4e551d77ddb6ecd73552b12b1af286388d,False,6,6,6,0.45,Verification_Expert,Verification_Expert,,
+whowhen_auto,2aa5dd83fbcd0dce9a3dd4592106e5b5edf738008d932e357d477bba80e59ccf,False,8,5,0,0.5,Verification_Expert,DataAnalysis_Expert,,
+whowhen_auto,a9074997e698f912b9e751779ea19c1e92fa148404e90e0ae997acea3f9559b0,False,5,5,5,0.5,Verification_Expert,Verification_Expert,,
+whowhen_auto,e6bc98089608217e45b6956a46518fe3cce64a799b3ac43c6974c449ae14c408,False,0,1,0,0.5,DataAnalysis_Expert,Verification_Expert,,
+whowhen_auto,b4cc024b-3f5e-480e-b96a-6656493255b5,False,1,5,7,0.25,MilitaryHistory_Expert,MilitaryHistory_Expert,,
+whowhen_auto,ad2b4d70-9314-4fe6-bfbe-894a45f6055f,False,1,9,9,0.4,WebDevelopment_Expert,GraphicDesign_Expert,,
+whowhen_auto,853c8244-429e-46ca-89f2-addf40dfb2bd,False,4,7,7,0.35,ArtHistory_Expert,Verification_Expert,,
+whowhen_auto,d5141ca5-e7a0-469f-bf3e-e773507c86e2,False,3,3,8,0.5,WebServing_Expert,WebServing_Expert,,
+whowhen_auto,9e31099fffa6a3891c94934fd4fc2f3f522d51c1904ff3561f3a10e4bf245821,False,5,5,5,0.6,CorporateHistory_IPOs_MondayCom_Expert,CorporateHistory_IPOs_MondayCom_Expert,,
+whowhen_auto,32102e3e-d12a-4209-9163-7b3a104efe5d,False,8,8,6,0.3,Blu-Ray_Expert,Blu-Ray_Expert,,
+whowhen_auto,f46b4380-207e-4434-820b-f32ce04ae2a4,False,1,1,4,0.8,Music_Critic_Expert,Music_Critic_Expert,,
+whowhen_auto,df6561b2-7ee5-4540-baab-5095f742716a,False,4,4,4,0.8,Verification_Expert,Verification_Expert,,
+whowhen_auto,8f80e01c-1296-4371-9486-bb3d68651a60,False,5,5,5,0.75,MusicTheory_Expert,MusicTheory_Expert,,
+whowhen_auto,65afbc8a-89ca-4ad5-8d62-355bb401f61d,False,4,4,0,0.4,AlgorithmDesign_Expert,AlgorithmDesign_Expert,,
+whowhen_auto,57d9dc6935e8a40b02e7f8ec81768fe70e68a0c05f6866927c9fda38db38a486,False,2,2,2,0.6,Tickets_Pricing_Expert,Tickets_Pricing_Expert,,
+whowhen_auto,23dd907f-1261-4488-b21c-e9185af91d5e,False,7,7,7,0.85,Poetry_Expert,Poetry_Expert,,
+whowhen_auto,f2feb6a4-363c-4c09-a804-0db564eafd68,False,2,2,2,0.8,HawaiiRealEstate_Expert,HawaiiRealEstate_Expert,,
+whowhen_auto,16d825ff-1623-4176-a5b5-42e0f5c2b0ac,False,0,0,0,0.45,DataAnalysis_Expert,DataAnalysis_Expert,,
+whowhen_auto,e0c10771-d627-4fd7-9694-05348e54ee36,False,1,1,1,0.85,Verification_Expert,Verification_Expert,,
+whowhen_auto,65638e28-7f37-4fa7-b7b9-8c19bb609879,False,9,7,7,0.35,Neurology_Expert,Literature_Expert,,
+whowhen_auto,d0633230-7067-47a9-9dbf-ee11e0a2cdd6,False,1,1,1,0.85,Verification_Expert,Verification_Expert,,
+whowhen_auto,c7afe00869f98cf363fd83677ac41757ed5e57f03eacc3d1304feb0a92084bd1,False,2,2,2,0.65,Movie_Expert,Movie_Expert,,
+whowhen_auto,5188369a-3bbe-43d8-8b94-11558f909a08,False,4,8,8,0.5,MerriamWebsterWordOfTheDay_Historian_Expert,Verification_Expert,,
+whowhen_auto,e4e91f1c-1dcd-439e-9fdd-cb976f5293fd,False,2,3,3,0.55,Research_Expert,Literature_Expert,,
+whowhen_auto,e142056d-56ab-4352-b091-b56054bd1359,False,1,1,1,0.9,GameTheory_Expert,GameTheory_Expert,,
+whowhen_auto,71345b0a-9c7d-4b50-b2bf-937ec5879845,False,8,1,0,0.25,WebServing_Expert,WebServing_Expert,,
