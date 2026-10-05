@@ -1,0 +1,165 @@
+domain,task_id,failed_runs_of_4,amazon_changed,sierra_changed
+airline,0,0,,
+airline,1,0,,
+airline,2,4,user_instructions; expected_actions; nl_assertions,user_instructions; expected_actions; nl_assertions
+airline,3,0,,
+airline,4,0,,
+airline,5,0,user_instructions; nl_assertions,user_instructions; nl_assertions
+airline,6,1,,
+airline,7,4,user_instructions; expected_actions; nl_assertions,user_instructions; expected_actions; nl_assertions
+airline,8,0,,
+airline,9,4,expected_actions; nl_assertions,expected_actions; nl_assertions
+airline,10,0,,
+airline,11,0,,
+airline,12,3,user_instructions,user_instructions
+airline,13,1,user_instructions,user_instructions
+airline,14,4,,user_instructions; nl_assertions; communicate_info
+airline,15,1,user_instructions,user_instructions
+airline,16,0,user_instructions,user_instructions
+airline,17,0,,
+airline,18,4,user_instructions,user_instructions
+airline,19,0,user_instructions,user_instructions
+airline,20,0,,
+airline,21,0,user_instructions; expected_actions; nl_assertions,user_instructions
+airline,22,0,,
+airline,23,4,expected_actions,user_instructions; expected_actions; nl_assertions
+airline,24,0,,
+airline,25,0,user_instructions,user_instructions
+airline,26,0,,
+airline,27,4,user_instructions; expected_actions; nl_assertions,user_instructions; expected_actions; nl_assertions
+airline,28,0,,
+airline,29,4,user_instructions; expected_actions; nl_assertions,user_instructions; expected_actions; nl_assertions
+airline,30,0,user_instructions,user_instructions
+airline,31,2,,
+airline,32,3,user_instructions,user_instructions
+airline,33,4,,expected_actions; nl_assertions
+airline,34,2,user_instructions,user_instructions
+airline,35,4,expected_actions,expected_actions
+airline,36,1,,
+airline,37,3,expected_actions; nl_assertions,expected_actions; nl_assertions
+airline,38,4,expected_actions; nl_assertions,expected_actions; nl_assertions
+airline,39,4,,
+airline,40,0,,
+airline,41,0,,
+airline,42,1,user_instructions,user_instructions
+airline,43,0,user_instructions,user_instructions
+airline,44,4,user_instructions; expected_actions; nl_assertions,user_instructions; expected_actions; nl_assertions
+airline,45,1,user_instructions,user_instructions
+airline,46,0,,
+airline,47,0,,
+airline,48,2,,
+airline,49,2,,
+retail,0,1,user_instructions,user_instructions
+retail,1,0,user_instructions,user_instructions
+retail,2,0,user_instructions,user_instructions; nl_assertions
+retail,3,0,user_instructions,user_instructions; nl_assertions
+retail,4,0,user_instructions,user_instructions; nl_assertions
+retail,5,2,,
+retail,6,0,,
+retail,7,0,,
+retail,8,1,user_instructions,
+retail,9,0,,
+retail,10,0,user_instructions,user_instructions
+retail,11,0,,
+retail,12,1,user_instructions; expected_actions,expected_actions
+retail,13,0,expected_actions,expected_actions
+retail,14,0,,
+retail,15,1,user_instructions,user_instructions
+retail,16,0,,nl_assertions
+retail,17,0,,
+retail,18,4,user_instructions; expected_actions,user_instructions; expected_actions
+retail,19,0,,nl_assertions
+retail,20,3,user_instructions,user_instructions
+retail,21,0,expected_actions,expected_actions; nl_assertions
+retail,22,3,user_instructions,user_instructions
+retail,23,0,,
+retail,24,0,,nl_assertions
+retail,25,1,user_instructions,
+retail,26,0,,
+retail,27,1,,
+retail,28,0,user_instructions,user_instructions; nl_assertions
+retail,29,1,user_instructions,user_instructions; nl_assertions
+retail,30,0,,
+retail,31,0,,
+retail,32,1,,
+retail,33,2,,communicate_info
+retail,34,4,,communicate_info
+retail,35,0,user_instructions,
+retail,36,0,,nl_assertions
+retail,37,1,,nl_assertions
+retail,38,2,,nl_assertions
+retail,39,1,,nl_assertions
+retail,40,0,,nl_assertions
+retail,41,1,,
+retail,42,0,user_instructions,
+retail,43,0,,nl_assertions
+retail,44,0,,nl_assertions
+retail,45,0,,nl_assertions
+retail,46,0,,nl_assertions
+retail,47,0,,nl_assertions
+retail,48,0,,
+retail,49,0,expected_actions,
+retail,50,0,,
+retail,51,0,,
+retail,52,0,,
+retail,53,0,,
+retail,54,1,user_instructions,user_instructions; nl_assertions
+retail,55,0,user_instructions,user_instructions
+retail,56,0,,
+retail,57,0,,
+retail,58,0,,
+retail,59,2,user_instructions; expected_actions,expected_actions; nl_assertions
+retail,60,0,,nl_assertions
+retail,61,0,,
+retail,62,3,user_instructions,user_instructions; nl_assertions
+retail,63,1,,nl_assertions
+retail,64,1,,
+retail,65,0,,
+retail,66,1,,
+retail,67,0,,nl_assertions
+retail,68,0,,nl_assertions
+retail,69,1,,
+retail,70,0,,nl_assertions
+retail,71,1,user_instructions,
+retail,72,0,user_instructions,
+retail,73,0,,
+retail,74,0,user_instructions,
+retail,75,0,,
+retail,76,1,user_instructions,user_instructions; nl_assertions
+retail,77,0,,
+retail,78,1,,
+retail,79,3,,
+retail,80,1,,
+retail,81,1,,
+retail,82,4,,
+retail,83,0,,
+retail,84,0,,
+retail,85,0,,
+retail,86,0,,
+retail,87,1,,
+retail,88,0,,
+retail,89,0,,nl_assertions
+retail,90,1,,
+retail,91,4,user_instructions; expected_actions,user_instructions; expected_actions
+retail,92,0,,
+retail,93,1,user_instructions,
+retail,94,1,,
+retail,95,0,,nl_assertions
+retail,96,0,,
+retail,97,0,,
+retail,98,2,user_instructions,user_instructions
+retail,99,0,user_instructions,user_instructions
+retail,100,3,user_instructions,user_instructions
+retail,101,0,,
+retail,102,0,,
+retail,103,0,,nl_assertions
+retail,104,1,,nl_assertions
+retail,105,3,,
+retail,106,2,,
+retail,107,4,user_instructions; expected_actions,user_instructions; expected_actions
+retail,108,0,,nl_assertions
+retail,109,1,user_instructions,
+retail,110,2,,
+retail,111,2,,
+retail,112,3,,
+retail,113,0,,
