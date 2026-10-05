@@ -1,5 +1,7 @@
 # Can a decision model find where an agent failed?
 
+Post: [vlrmzz.github.io/writing/jev-agent-failures.html](https://vlrmzz.github.io/writing/jev-agent-failures.html)
+
 Code and result files behind the post of the same name: a benchmark of TypeSafe's
 Jev on failed AI-agent runs.
 
