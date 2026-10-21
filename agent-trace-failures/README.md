@@ -1,4 +1,4 @@
-# Can a decision model find where an agent failed?
+# Agent failure attribution: can a decision model find the step that went wrong?
 
 Post: [vlrmzz.github.io/writing/jev-agent-failures.html](https://vlrmzz.github.io/writing/jev-agent-failures.html)
 

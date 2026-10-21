@@ -1,4 +1,4 @@
-# Is visual data really richer than text?
+# Pixels vs tokens: is visual data richer than text, or is it the convolution?
 
 Post: [vlrmzz.github.io/writing/pixels-vs-tokens.html](https://vlrmzz.github.io/writing/pixels-vs-tokens.html)
 

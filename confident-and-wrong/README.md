@@ -1,4 +1,4 @@
-# Confident and wrong
+# Model calibration: when can you trust a model's confidence?
 
 Post: [vlrmzz.github.io/writing/confident-and-wrong.html](https://vlrmzz.github.io/writing/confident-and-wrong.html)
 

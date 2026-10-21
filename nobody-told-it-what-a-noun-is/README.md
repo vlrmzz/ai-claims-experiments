@@ -1,4 +1,4 @@
-# Nobody told it what a noun is
+# Nobody taught it grammar: parts of speech from next-word prediction
 
 Post: [vlrmzz.github.io/writing/nobody-told-it-what-a-noun-is.html](https://vlrmzz.github.io/writing/nobody-told-it-what-a-noun-is.html)
 
