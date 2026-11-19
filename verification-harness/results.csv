@@ -1,0 +1,2548 @@
+task_id,difficulty,condition,repeat,success,attempts_used,final_failure_kind,errors,final_code
+t01_palindrome,easy,baseline,0,True,1,,,"def is_palindrome(s: str) -> bool:
+    """"""
+    Returns True if s reads the same forwards and backwards after:
+    - removing all non-alphanumeric characters
+    - converting to lowercase
+    
+    An empty string or string with no alphanumeric characters counts as a palindrome.
+    """"""
+    # Filter to keep only alphanumeric characters and convert to lowercase
+    cleaned = ''.join(char.lower() for char in s if char.isalnum())
+    
+    # Check if the cleaned string equals its reverse
+    return cleaned == cleaned[::-1]
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert is_palindrome(""A man, a plan, a canal: Panama"") == True
+    assert is_palindrome(""race a car"") == False
+    assert is_palindrome("""") == True
+    print(""All tests passed!"")
+"
+t01_palindrome,easy,baseline,1,True,1,,,"def is_palindrome(s: str) -> bool:
+    """"""
+    Returns True if s reads the same forwards and backwards after:
+    - dropping every non-alphanumeric character
+    - converting to lowercase
+    
+    An empty string or string with no alphanumeric characters counts as a palindrome.
+    """"""
+    # Filter to keep only alphanumeric characters and convert to lowercase
+    filtered = ''.join(char.lower() for char in s if char.isalnum())
+    
+    # Check if it equals its reverse
+    return filtered == filtered[::-1]
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert is_palindrome(""A man, a plan, a canal: Panama"") == True
+    assert is_palindrome(""race a car"") == False
+    assert is_palindrome("""") == True
+    print(""All tests passed!"")
+"
+t01_palindrome,easy,baseline,2,True,1,,,"def is_palindrome(s: str) -> bool:
+    """"""
+    Returns True if s reads the same forwards and backwards after
+    removing non-alphanumeric characters and converting to lowercase.
+    
+    Args:
+        s: The string to check
+        
+    Returns:
+        True if s is a palindrome after cleaning, False otherwise
+    """"""
+    # Filter to keep only alphanumeric characters and convert to lowercase
+    cleaned = ''.join(c.lower() for c in s if c.isalnum())
+    
+    # Check if the cleaned string equals its reverse
+    return cleaned == cleaned[::-1]
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert is_palindrome(""A man, a plan, a canal: Panama"") == True
+    assert is_palindrome(""race a car"") == False
+    assert is_palindrome("""") == True
+    print(""All test cases passed!"")
+"
+t01_palindrome,easy,harness,0,True,1,,,"def is_palindrome(s: str) -> bool:
+    """"""
+    Check if a string is a palindrome after removing non-alphanumeric characters
+    and converting to lowercase.
+    
+    Args:
+        s: The input string to check
+        
+    Returns:
+        True if the string is a palindrome after processing, False otherwise
+    """"""
+    # Keep only alphanumeric characters and convert to lowercase
+    cleaned = ''.join(char.lower() for char in s if char.isalnum())
+    
+    # Check if the cleaned string equals its reverse
+    return cleaned == cleaned[::-1]
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert is_palindrome(""A man, a plan, a canal: Panama"") == True
+    assert is_palindrome(""race a car"") == False
+    assert is_palindrome("""") == True
+    print(""All tests passed!"")
+"
+t01_palindrome,easy,harness,1,True,1,,,"def is_palindrome(s: str) -> bool:
+    """"""
+    Check if a string is a palindrome after removing non-alphanumeric characters
+    and converting to lowercase.
+    
+    Args:
+        s: The input string to check
+        
+    Returns:
+        True if the string is a palindrome after cleaning, False otherwise
+    """"""
+    # Filter to keep only alphanumeric characters and convert to lowercase
+    cleaned = ''.join(char.lower() for char in s if char.isalnum())
+    
+    # Check if the cleaned string reads the same forwards and backwards
+    return cleaned == cleaned[::-1]
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert is_palindrome(""A man, a plan, a canal: Panama"") == True
+    assert is_palindrome(""race a car"") == False
+    assert is_palindrome("""") == True
+    print(""All tests passed!"")
+"
+t01_palindrome,easy,harness,2,True,1,,,"def is_palindrome(s: str) -> bool:
+    """"""
+    Returns True if s reads the same forwards and backwards after:
+    - dropping every non-alphanumeric character
+    - converting remaining characters to lowercase
+    
+    An empty string or string with no alphanumeric characters counts as a palindrome.
+    """"""
+    # Filter to keep only alphanumeric characters and convert to lowercase
+    cleaned = ''.join(c.lower() for c in s if c.isalnum())
+    
+    # Check if the cleaned string equals its reverse
+    return cleaned == cleaned[::-1]
+"
+t02_roman,easy,baseline,0,True,1,,,"def roman_to_int(s: str) -> int:
+    """"""
+    Convert a Roman numeral string to an integer.
+    
+    Args:
+        s: A valid Roman numeral string in uppercase
+        
+    Returns:
+        The integer value of the Roman numeral
+        
+    Examples:
+        roman_to_int(""III"") -> 3
+        roman_to_int(""MCMXCIV"") -> 1994
+    """"""
+    values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    
+    total = 0
+    prev_value = 0
+    
+    # Iterate from right to left
+    for char in reversed(s):
+        current_value = values[char]
+        # If current value is less than the previous (to the right),
+        # it's a subtractive case, so subtract it
+        if current_value < prev_value:
+            total -= current_value
+        else:
+            total += current_value
+        prev_value = current_value
+    
+    return total
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert roman_to_int(""III"") == 3
+    assert roman_to_int(""MCMXCIV"") == 1994
+    assert roman_to_int(""I"") == 1
+    assert roman_to_int(""IV"") == 4
+    assert roman_to_int(""IX"") == 9
+    assert roman_to_int(""LVIII"") == 58
+    assert roman_to_int(""MMXXVI"") == 2026
+    print(""All tests passed!"")
+"
+t02_roman,easy,baseline,1,True,1,,,"def roman_to_int(s: str) -> int:
+    """"""
+    Convert a Roman numeral string to its integer value.
+    
+    Args:
+        s: A valid Roman numeral string (uppercase) between 1 and 3999
+        
+    Returns:
+        The integer value of the Roman numeral
+        
+    Examples:
+        >>> roman_to_int(""III"")
+        3
+        >>> roman_to_int(""MCMXCIV"")
+        1994
+    """"""
+    # Mapping of single Roman numerals to their values
+    values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    
+    # Mapping of subtractive pairs to their values
+    subtractive = {
+        'IV': 4,
+        'IX': 9,
+        'XL': 40,
+        'XC': 90,
+        'CD': 400,
+        'CM': 900
+    }
+    
+    total = 0
+    i = 0
+    
+    while i < len(s):
+        # Check if the next two characters form a subtractive pair
+        if i + 1 < len(s) and s[i:i+2] in subtractive:
+            total += subtractive[s[i:i+2]]
+            i += 2
+        else:
+            # Single character - add its value
+            total += values[s[i]]
+            i += 1
+    
+    return total
+
+
+if __name__ == ""__main__"":
+    # Test cases
+    print(roman_to_int(""III""))        # 3
+    print(roman_to_int(""MCMXCIV""))    # 1994
+    print(roman_to_int(""IV""))         # 4
+    print(roman_to_int(""IX""))         # 9
+    print(roman_to_int(""LVIII""))      # 58
+    print(roman_to_int(""MMMCMXCIX""))  # 3999
+"
+t02_roman,easy,baseline,2,True,1,,,"def roman_to_int(s: str) -> int:
+    """"""
+    Convert a Roman numeral string to its integer value.
+    
+    Args:
+        s: A valid Roman numeral string (1-3999) using uppercase symbols
+        
+    Returns:
+        The integer value of the Roman numeral
+    """"""
+    # Mapping of Roman numerals to their integer values
+    roman_values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    
+    total = 0
+    prev_value = 0
+    
+    # Iterate through the string from right to left
+    # This allows us to detect subtractive cases naturally
+    for char in reversed(s):
+        value = roman_values[char]
+        
+        # If current value is less than the previous value (to the right),
+        # it's a subtractive case (like IV, IX, XL, XC, CD, CM)
+        if value < prev_value:
+            total -= value
+        else:
+            total += value
+        
+        prev_value = value
+    
+    return total
+
+
+# Test cases
+if __name__ == ""__main__"":
+    print(roman_to_int(""III""))        # 3
+    print(roman_to_int(""MCMXCIV""))    # 1994
+    print(roman_to_int(""IV""))          # 4
+    print(roman_to_int(""IX""))          # 9
+    print(roman_to_int(""LVIII""))       # 58
+    print(roman_to_int(""M""))           # 1000
+"
+t02_roman,easy,harness,0,True,1,,,"def roman_to_int(s: str) -> int:
+    """"""
+    Convert a Roman numeral string to its integer value.
+    
+    Args:
+        s: A valid Roman numeral string (uppercase)
+        
+    Returns:
+        The integer value of the Roman numeral
+        
+    Examples:
+        roman_to_int(""III"") -> 3
+        roman_to_int(""MCMXCIV"") -> 1994
+    """"""
+    # Map of Roman symbols to their integer values
+    roman_values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    
+    total = 0
+    
+    # Iterate through each character in the Roman numeral
+    for i in range(len(s)):
+        current_value = roman_values[s[i]]
+        
+        # Check if there's a next character
+        if i + 1 < len(s):
+            next_value = roman_values[s[i + 1]]
+            # If current value is less than next value, it's a subtractive case
+            # (e.g., IV = 4, IX = 9, XL = 40, etc.)
+            if current_value < next_value:
+                total -= current_value
+            else:
+                total += current_value
+        else:
+            # Last character, always add
+            total += current_value
+    
+    return total
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert roman_to_int(""III"") == 3
+    assert roman_to_int(""MCMXCIV"") == 1994
+    assert roman_to_int(""I"") == 1
+    assert roman_to_int(""V"") == 5
+    assert roman_to_int(""IV"") == 4
+    assert roman_to_int(""IX"") == 9
+    assert roman_to_int(""XL"") == 40
+    assert roman_to_int(""XC"") == 90
+    assert roman_to_int(""CD"") == 400
+    assert roman_to_int(""CM"") == 900
+    assert roman_to_int(""MMMCMXCIX"") == 3999
+    print(""All tests passed!"")
+"
+t02_roman,easy,harness,1,True,1,,,"def roman_to_int(s: str) -> int:
+    """"""
+    Convert a Roman numeral string to its integer value.
+    
+    Args:
+        s: A valid Roman numeral string (1-3999) using I, V, X, L, C, D, M
+           and standard subtractive pairs (IV, IX, XL, XC, CD, CM)
+    
+    Returns:
+        The integer value of the Roman numeral
+    
+    Examples:
+        >>> roman_to_int(""III"")
+        3
+        >>> roman_to_int(""MCMXCIV"")
+        1994
+    """"""
+    # Mapping of Roman symbols to their integer values
+    roman_values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    
+    total = 0
+    
+    for i in range(len(s)):
+        # If the next character has a larger value, subtract the current value
+        # (subtractive principle: e.g., IV = 5 - 1 = 4)
+        if i < len(s) - 1 and roman_values[s[i]] < roman_values[s[i + 1]]:
+            total -= roman_values[s[i]]
+        else:
+            total += roman_values[s[i]]
+    
+    return total
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert roman_to_int(""III"") == 3
+    assert roman_to_int(""MCMXCIV"") == 1994
+    assert roman_to_int(""IV"") == 4
+    assert roman_to_int(""IX"") == 9
+    assert roman_to_int(""LVIII"") == 58
+    assert roman_to_int(""MMXXVI"") == 2026
+    print(""All tests passed!"")
+"
+t02_roman,easy,harness,2,True,1,,,"def roman_to_int(s: str) -> int:
+    """"""
+    Convert a Roman numeral string to an integer.
+    
+    Args:
+        s: A valid Roman numeral string (1-3999)
+    
+    Returns:
+        The integer value of the Roman numeral
+    """"""
+    roman_values = {
+        'I': 1,
+        'V': 5,
+        'X': 10,
+        'L': 50,
+        'C': 100,
+        'D': 500,
+        'M': 1000
+    }
+    
+    result = 0
+    prev_value = 0
+    
+    # Iterate from right to left
+    for i in range(len(s) - 1, -1, -1):
+        curr_value = roman_values[s[i]]
+        
+        # If current value is less than previous, subtract it (subtractive case)
+        # Otherwise, add it
+        if curr_value < prev_value:
+            result -= curr_value
+        else:
+            result += curr_value
+        
+        prev_value = curr_value
+    
+    return result
+
+
+# Test cases
+if __name__ == ""__main__"":
+    print(roman_to_int(""III""))        # Output: 3
+    print(roman_to_int(""MCMXCIV""))    # Output: 1994
+    print(roman_to_int(""IV""))         # Output: 4
+    print(roman_to_int(""IX""))         # Output: 9
+    print(roman_to_int(""LVIII""))      # Output: 58
+    print(roman_to_int(""M""))          # Output: 1000
+"
+t03_rle,easy,baseline,0,True,1,,,"from itertools import groupby
+
+def rle_encode(s: str) -> str:
+    """"""
+    Run-length encoding: replace each maximal run of the same character 
+    with that character followed by the length of the run.
+    
+    Args:
+        s: String containing only ASCII letters
+        
+    Returns:
+        Run-length encoded string
+        
+    Examples:
+        >>> rle_encode(""aaabccdddd"")
+        'a3b1c2d4'
+        >>> rle_encode(""a"")
+        'a1'
+        >>> rle_encode("""")
+        ''
+    """"""
+    return """".join(char + str(len(list(group))) for char, group in groupby(s))
+"
+t03_rle,easy,baseline,1,True,1,,,"from itertools import groupby
+
+def rle_encode(s: str) -> str:
+    """"""
+    Run-length encode a string.
+    
+    Replaces each maximal run of the same character with that character
+    followed by the length of the run in decimal. Always writes the count,
+    even when it is 1. Comparison is case-sensitive.
+    
+    Args:
+        s: A string containing only ASCII letters
+        
+    Returns:
+        The run-length encoded string
+        
+    Examples:
+        >>> rle_encode(""aaabccdddd"")
+        ""a3b1c2d4""
+        >>> rle_encode(""a"")
+        ""a1""
+        >>> rle_encode("""")
+        """"
+    """"""
+    return """".join(char + str(len(list(group))) for char, group in groupby(s))
+"
+t03_rle,easy,baseline,2,True,1,,,"from itertools import groupby
+
+def rle_encode(s: str) -> str:
+    """"""
+    Perform run-length encoding on a string.
+    
+    Replace each maximal run of the same character with that character 
+    followed by the length of the run in decimal.
+    
+    Args:
+        s: A string containing only ASCII letters
+        
+    Returns:
+        The run-length encoded string
+        
+    Examples:
+        >>> rle_encode(""aaabccdddd"")
+        'a3b1c2d4'
+        >>> rle_encode(""a"")
+        'a1'
+        >>> rle_encode("""")
+        ''
+    """"""
+    return """".join(char + str(sum(1 for _ in group)) for char, group in groupby(s))
+"
+t03_rle,easy,harness,0,True,1,,,"def rle_encode(s: str) -> str:
+    """"""
+    Run-length encoding: replace each maximal run of the same character
+    with that character followed by the length of the run.
+    
+    Args:
+        s: A string containing only ASCII letters
+        
+    Returns:
+        A string with run-length encoded representation
+        
+    Examples:
+        >>> rle_encode(""aaabccdddd"")
+        ""a3b1c2d4""
+        >>> rle_encode(""a"")
+        ""a1""
+        >>> rle_encode("""")
+        """"
+    """"""
+    if not s:
+        return """"
+    
+    result = []
+    i = 0
+    
+    while i < len(s):
+        char = s[i]
+        count = 1
+        
+        # Count consecutive occurrences of the same character
+        while i + count < len(s) and s[i + count] == char:
+            count += 1
+        
+        # Append character and count to result
+        result.append(char + str(count))
+        
+        # Move to the next different character
+        i += count
+    
+    return ''.join(result)
+"
+t03_rle,easy,harness,1,True,1,,,"from itertools import groupby
+
+def rle_encode(s: str) -> str:
+    """"""
+    Perform run-length encoding on a string.
+    
+    Replaces each maximal run of the same character with that character
+    followed by the length of the run in decimal.
+    
+    Args:
+        s: A string containing only ASCII letters
+        
+    Returns:
+        The run-length encoded string
+        
+    Examples:
+        >>> rle_encode(""aaabccdddd"")
+        'a3b1c2d4'
+        >>> rle_encode(""a"")
+        'a1'
+        >>> rle_encode("""")
+        ''
+    """"""
+    return """".join(char + str(sum(1 for _ in group)) for char, group in groupby(s))
+"
+t03_rle,easy,harness,2,True,1,,,"def rle_encode(s: str) -> str:
+    """"""
+    Run-length encoding: replace each maximal run of the same character
+    with that character followed by the length of the run in decimal.
+    Always writes the count, even when it is 1.
+    
+    Args:
+        s: A string containing only ASCII letters
+        
+    Returns:
+        The run-length encoded string
+    """"""
+    if not s:
+        return """"
+    
+    result = []
+    i = 0
+    while i < len(s):
+        char = s[i]
+        count = 1
+        while i + count < len(s) and s[i + count] == char:
+            count += 1
+        result.append(char + str(count))
+        i += count
+    
+    return """".join(result)
+
+
+if __name__ == ""__main__"":
+    # Test cases
+    test_cases = [
+        (""aaabccdddd"", ""a3b1c2d4""),
+        (""a"", ""a1""),
+        ("""", """"),
+        (""aabbcc"", ""a2b2c2""),
+        (""AaBbCc"", ""A1a1B1b1C1c1""),
+        (""aaaa"", ""a4""),
+    ]
+    
+    for input_str, expected in test_cases:
+        result = rle_encode(input_str)
+        status = ""✓"" if result == expected else ""✗""
+        print(f""{status} rle_encode({input_str!r}) = {result!r} (expected {expected!r})"")
+"
+t04_intervals,medium,baseline,0,True,1,,,"def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
+    """"""
+    Merge overlapping intervals.
+    
+    Each interval is [start, end] (both inclusive).
+    Intervals that touch (e.g., [1, 2] and [2, 3]) are merged.
+    Returns sorted by start value.
+    
+    Args:
+        intervals: List of [start, end] pairs
+        
+    Returns:
+        List of merged [start, end] pairs sorted by start
+    """"""
+    if not intervals:
+        return []
+    
+    # Sort intervals by start value
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    
+    # Initialize result with the first interval
+    result = [sorted_intervals[0]]
+    
+    # Merge overlapping intervals
+    for current_start, current_end in sorted_intervals[1:]:
+        last_start, last_end = result[-1]
+        
+        # If current interval overlaps or touches the last merged interval
+        if current_start <= last_end:
+            # Merge by extending the end of the last interval
+            result[-1][1] = max(last_end, current_end)
+        else:
+            # No overlap, add as a new interval
+            result.append([current_start, current_end])
+    
+    return result
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]) == [[1, 6], [8, 10], [15, 18]]
+    assert merge_intervals([[1, 4], [4, 5]]) == [[1, 5]]
+    assert merge_intervals([]) == []
+    assert merge_intervals([[1, 5]]) == [[1, 5]]
+    assert merge_intervals([[1, 2], [2, 3]]) == [[1, 3]]
+    assert merge_intervals([[5, 7], [1, 3], [4, 6]]) == [[1, 3], [4, 7]]
+    print(""All tests passed!"")
+"
+t04_intervals,medium,baseline,1,True,1,,,"def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
+    """"""
+    Merge overlapping or touching intervals.
+    
+    Args:
+        intervals: List of [start, end] intervals (inclusive on both ends)
+        
+    Returns:
+        List of merged intervals sorted by start position
+    """"""
+    # Handle empty input
+    if not intervals:
+        return []
+    
+    # Sort intervals by start position
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    
+    # Initialize merged list with first interval
+    merged = [sorted_intervals[0]]
+    
+    # Iterate through remaining intervals
+    for current in sorted_intervals[1:]:
+        last_merged = merged[-1]
+        
+        # If current interval overlaps or touches the last merged interval
+        # (touching: current[0] == last_merged[1], overlapping: current[0] < last_merged[1])
+        if current[0] <= last_merged[1]:
+            # Merge by extending the end of last_merged interval
+            last_merged[1] = max(last_merged[1], current[1])
+        else:
+            # No overlap, add current interval as new merged interval
+            merged.append(current)
+    
+    return merged
+
+
+# Test cases
+if __name__ == ""__main__"":
+    # Example 1
+    result1 = merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]])
+    assert result1 == [[1, 6], [8, 10], [15, 18]]
+    print(f""Test 1: {result1}"")
+    
+    # Example 2
+    result2 = merge_intervals([[1, 4], [4, 5]])
+    assert result2 == [[1, 5]]
+    print(f""Test 2: {result2}"")
+    
+    # Edge cases
+    result3 = merge_intervals([])
+    assert result3 == []
+    print(f""Test 3 (empty): {result3}"")
+    
+    result4 = merge_intervals([[5, 5]])
+    assert result4 == [[5, 5]]
+    print(f""Test 4 (single): {result4}"")
+    
+    result5 = merge_intervals([[4, 5], [1, 3], [8, 10]])
+    assert result5 == [[1, 3], [4, 5], [8, 10]]
+    print(f""Test 5 (no overlap): {result5}"")
+    
+    print(""All tests passed!"")
+"
+t04_intervals,medium,baseline,2,True,1,,,"def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
+    """"""
+    Merge overlapping or touching intervals.
+    
+    Args:
+        intervals: List of [start, end] intervals (inclusive)
+    
+    Returns:
+        List of merged intervals, sorted by start position
+    """"""
+    if not intervals:
+        return []
+    
+    # Sort intervals by start position
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    
+    # Initialize result with the first interval
+    result = [sorted_intervals[0]]
+    
+    # Iterate through remaining intervals
+    for current in sorted_intervals[1:]:
+        last = result[-1]
+        
+        # If current interval overlaps or touches the last interval
+        # (current starts at or before the last one ends)
+        if current[0] <= last[1]:
+            # Merge by extending the end of the last interval
+            last[1] = max(last[1], current[1])
+        else:
+            # No overlap, add current interval to result
+            result.append(current)
+    
+    return result
+
+
+# Test cases
+if __name__ == ""__main__"":
+    # Example 1
+    print(merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]))
+    # Expected: [[1, 6], [8, 10], [15, 18]]
+    
+    # Example 2
+    print(merge_intervals([[1, 4], [4, 5]]))
+    # Expected: [[1, 5]]
+    
+    # Edge cases
+    print(merge_intervals([]))
+    # Expected: []
+    
+    print(merge_intervals([[1, 5]]))
+    # Expected: [[1, 5]]
+    
+    print(merge_intervals([[5, 7], [1, 3], [3, 6]]))
+    # Expected: [[1, 7]]
+    
+    print(merge_intervals([[1, 2], [3, 4], [5, 6]]))
+    # Expected: [[1, 2], [3, 4], [5, 6]]
+"
+t04_intervals,medium,harness,0,True,1,,,"def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
+    """"""
+    Merge overlapping and touching intervals.
+    
+    Args:
+        intervals: List of [start, end] intervals (start <= end, both inclusive)
+    
+    Returns:
+        List of merged intervals, sorted by start position
+    """"""
+    if not intervals:
+        return []
+    
+    # Sort intervals by start time
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    
+    # Initialize result with a copy of the first interval
+    merged = [sorted_intervals[0][:]]
+    
+    # Iterate through remaining intervals
+    for current in sorted_intervals[1:]:
+        # If current interval overlaps or touches the last merged interval
+        if current[0] <= merged[-1][1]:
+            # Merge by extending the end of the last interval
+            merged[-1][1] = max(merged[-1][1], current[1])
+        else:
+            # No overlap, add current interval as a new merged interval
+            merged.append(current[:])
+    
+    return merged
+
+
+# Test cases
+if __name__ == ""__main__"":
+    # Example 1: Multiple overlapping intervals
+    result1 = merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]])
+    assert result1 == [[1, 6], [8, 10], [15, 18]], f""Test 1 failed: {result1}""
+    
+    # Example 2: Touching intervals
+    result2 = merge_intervals([[1, 4], [4, 5]])
+    assert result2 == [[1, 5]], f""Test 2 failed: {result2}""
+    
+    # Edge case: Empty input
+    result3 = merge_intervals([])
+    assert result3 == [], f""Test 3 failed: {result3}""
+    
+    # Edge case: Single interval
+    result4 = merge_intervals([[1, 5]])
+    assert result4 == [[1, 5]], f""Test 4 failed: {result4}""
+    
+    # Edge case: No overlapping intervals
+    result5 = merge_intervals([[1, 2], [3, 4], [5, 6]])
+    assert result5 == [[1, 2], [3, 4], [5, 6]], f""Test 5 failed: {result5}""
+    
+    # Edge case: Unsorted input with full overlap
+    result6 = merge_intervals([[5, 10], [1, 3], [2, 8]])
+    assert result6 == [[1, 10]], f""Test 6 failed: {result6}""
+    
+    print(""All tests passed!"")
+"
+t04_intervals,medium,harness,1,True,1,,,"def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
+    """"""
+    Merge overlapping and touching intervals.
+    
+    Args:
+        intervals: List of [start, end] intervals (inclusive on both ends)
+        
+    Returns:
+        List of merged intervals sorted by start time
+    """"""
+    if not intervals:
+        return []
+    
+    # Sort intervals by start time
+    sorted_intervals = sorted(intervals, key=lambda x: x[0])
+    
+    # Initialize result with the first interval
+    result = [sorted_intervals[0]]
+    
+    # Merge overlapping or touching intervals
+    for current in sorted_intervals[1:]:
+        last = result[-1]
+        # If current interval overlaps or touches the last interval in result
+        if current[0] <= last[1]:
+            # Merge by extending the end of the last interval
+            last[1] = max(last[1], current[1])
+        else:
+            # No overlap or touching, add as a new interval
+            result.append(current)
+    
+    return result
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert merge_intervals([[1, 3], [2, 6], [8, 10], [15, 18]]) == [[1, 6], [8, 10], [15, 18]]
+    assert merge_intervals([[1, 4], [4, 5]]) == [[1, 5]]
+    assert merge_intervals([]) == []
+    assert merge_intervals([[1, 5]]) == [[1, 5]]
+    assert merge_intervals([[1, 2], [2, 3], [3, 4]]) == [[1, 4]]
+    assert merge_intervals([[5, 7], [1, 3], [2, 4]]) == [[1, 4], [5, 7]]
+    print(""All tests passed!"")
+"
+t04_intervals,medium,harness,2,True,1,,,"def merge_intervals(intervals: list[list[int]]) -> list[list[int]]:
+    """"""
+    Merge overlapping or touching intervals.
+    
+    Args:
+        intervals: List of [start, end] pairs (inclusive)
+    
+    Returns:
+        List of merged intervals, sorted by start
+    """"""
+    if not intervals:
+        return []
+    
+    # Sort intervals by their start value
+    intervals.sort(key=lambda x: x[0])
+    
+    # Initialize result with the first interval
+    merged = [intervals[0]]
+    
+    # Process remaining intervals
+    for current in intervals[1:]:
+        last_merged = merged[-1]
+        
+        # If current interval overlaps or touches the last merged interval
+        if current[0] <= last_merged[1]:
+            # Merge by extending the end of the last interval
+            last_merged[1] = max(last_merged[1], current[1])
+        else:
+            # No overlap/touch, add current interval as new group
+            merged.append(current)
+    
+    return merged
+"
+t05_duration,medium,baseline,0,True,1,,,"def parse_duration(s: str) -> int:
+    if not s:
+        raise ValueError()
+    
+    units = {'d': 86400, 'h': 3600, 'm': 60, 's': 1}
+    unit_order = ['d', 'h', 'm', 's']
+    
+    total_seconds = 0
+    last_unit_index = -1
+    i = 0
+    
+    while i < len(s):
+        # Parse the number part
+        if not s[i].isdigit():
+            raise ValueError()
+        
+        num_str = """"
+        while i < len(s) and s[i].isdigit():
+            num_str += s[i]
+            i += 1
+        
+        # Parse the unit part
+        if i >= len(s):
+            raise ValueError()
+        
+        unit = s[i]
+        if unit not in units:
+            raise ValueError()
+        
+        # Check unit order and ensure no repetition
+        current_unit_index = unit_order.index(unit)
+        if current_unit_index <= last_unit_index:
+            raise ValueError()
+        
+        last_unit_index = current_unit_index
+        
+        # Add to total seconds
+        total_seconds += int(num_str) * units[unit]
+        
+        i += 1
+    
+    return total_seconds
+"
+t05_duration,medium,baseline,1,True,1,,,"def parse_duration(s: str) -> int:
+    if not s:
+        raise ValueError(""Invalid duration format"")
+    
+    unit_values = {'d': 86400, 'h': 3600, 'm': 60, 's': 1}
+    unit_indices = {'d': 0, 'h': 1, 'm': 2, 's': 3}
+    
+    total = 0
+    i = 0
+    last_unit_index = -1
+    
+    while i < len(s):
+        # Parse number (one or more digits)
+        if not s[i].isdigit():
+            raise ValueError(""Invalid duration format"")
+        
+        num_start = i
+        while i < len(s) and s[i].isdigit():
+            i += 1
+        
+        number = int(s[num_start:i])
+        
+        # Parse unit (single letter)
+        if i >= len(s):
+            raise ValueError(""Invalid duration format"")
+        
+        unit = s[i]
+        i += 1
+        
+        # Validate unit
+        if unit not in unit_values:
+            raise ValueError(""Invalid duration format"")
+        
+        # Check unit order (no repeats, no backwards)
+        current_unit_index = unit_indices[unit]
+        if current_unit_index <= last_unit_index:
+            raise ValueError(""Invalid duration format"")
+        
+        last_unit_index = current_unit_index
+        total += number * unit_values[unit]
+    
+    return total
+"
+t05_duration,medium,baseline,2,True,1,,,"def parse_duration(s: str) -> int:
+    if not s:
+        raise ValueError(""Empty string"")
+    
+    unit_values = {'d': 86400, 'h': 3600, 'm': 60, 's': 1}
+    unit_order = 'dhms'
+    last_unit_index = -1
+    
+    total_seconds = 0
+    current_number = """"
+    
+    for char in s:
+        if char.isdigit():
+            current_number += char
+        elif char in unit_values:
+            if not current_number:
+                raise ValueError(""Unit without a preceding number"")
+            
+            current_unit_index = unit_order.index(char)
+            if current_unit_index <= last_unit_index:
+                raise ValueError(""Unit out of order or repeated"")
+            
+            value = int(current_number)
+            total_seconds += value * unit_values[char]
+            
+            last_unit_index = current_unit_index
+            current_number = """"
+        else:
+            raise ValueError(f""Invalid character: {char}"")
+    
+    if current_number:
+        raise ValueError(""Number without a unit"")
+    
+    return total_seconds
+"
+t05_duration,medium,harness,0,True,1,,,"def parse_duration(s: str) -> int:
+    """"""
+    Parse a compact duration string and convert to seconds.
+    
+    Format: one or more components with no separators.
+    Each component is a non-negative integer followed by a unit letter:
+    - d = days (86400 s)
+    - h = hours (3600 s)
+    - m = minutes (60 s)
+    - s = seconds
+    
+    Units must appear in order (d, h, m, s), each at most once.
+    
+    Raises ValueError for invalid formats.
+    """"""
+    if not s:
+        raise ValueError(""Invalid duration format"")
+    
+    units = {'d': 86400, 'h': 3600, 'm': 60, 's': 1}
+    unit_order = {'d': 0, 'h': 1, 'm': 2, 's': 3}
+    
+    total_seconds = 0
+    i = 0
+    last_unit_order = -1
+    
+    while i < len(s):
+        # Parse the number
+        if not s[i].isdigit():
+            raise ValueError(""Invalid duration format"")
+        
+        num_start = i
+        while i < len(s) and s[i].isdigit():
+            i += 1
+        
+        number = int(s[num_start:i])
+        
+        # Parse the unit
+        if i >= len(s):
+            raise ValueError(""Invalid duration format"")
+        
+        unit = s[i]
+        if unit not in units:
+            raise ValueError(""Invalid duration format"")
+        
+        # Check order (catches both repeated and out-of-order units)
+        current_unit_order = unit_order[unit]
+        if current_unit_order <= last_unit_order:
+            raise ValueError(""Invalid duration format"")
+        
+        last_unit_order = current_unit_order
+        total_seconds += number * units[unit]
+        i += 1
+    
+    return total_seconds
+"
+t05_duration,medium,harness,1,True,1,,,"def parse_duration(s: str) -> int:
+    """"""
+    Convert a compact duration string to a number of seconds.
+    
+    Format: components written together with no separators.
+    Each component is a non-negative integer followed by one unit letter.
+    
+    Units: d (86400 s), h (3600 s), m (60 s), s (1 s)
+    
+    Units must appear in order d, h, m, s.
+    Each unit may appear at most once.
+    
+    Raises ValueError for invalid format.
+    """"""
+    if not s:
+        raise ValueError(""Empty string is not a valid duration"")
+    
+    unit_values = {'d': 86400, 'h': 3600, 'm': 60, 's': 1}
+    unit_order = ['d', 'h', 'm', 's']
+    
+    total_seconds = 0
+    i = 0
+    last_unit_index = -1
+    
+    while i < len(s):
+        # Parse the number part
+        if not s[i].isdigit():
+            raise ValueError(f""Expected digit at position {i}, got '{s[i]}'"")
+        
+        num_start = i
+        while i < len(s) and s[i].isdigit():
+            i += 1
+        
+        num = int(s[num_start:i])
+        
+        # Parse the unit part
+        if i >= len(s):
+            raise ValueError(""Number without a unit"")
+        
+        unit = s[i]
+        
+        if unit not in unit_values:
+            raise ValueError(f""Unknown unit '{unit}' at position {i}"")
+        
+        # Check that units are in the correct order and not repeated
+        current_unit_index = unit_order.index(unit)
+        if current_unit_index <= last_unit_index:
+            raise ValueError(f""Units out of order or repeated (unit '{unit}' at position {i})"")
+        
+        last_unit_index = current_unit_index
+        total_seconds += num * unit_values[unit]
+        i += 1
+    
+    return total_seconds
+"
+t05_duration,medium,harness,2,True,1,,,"def parse_duration(s: str) -> int:
+    """"""Convert a compact duration string to seconds.
+    
+    Format: one or more components of <number><unit> with no separators.
+    Units: d (86400s), h (3600s), m (60s), s (1s)
+    Units must appear in order d, h, m, s with no repetitions.
+    
+    Args:
+        s: Duration string like ""1d2h3m4s"" or ""1h30m""
+        
+    Returns:
+        Total duration in seconds
+        
+    Raises:
+        ValueError: If string doesn't follow the format
+    """"""
+    if not s:
+        raise ValueError(""Invalid duration string"")
+    
+    # Unit definitions: unit letter -> seconds
+    units = {'d': 86400, 'h': 3600, 'm': 60, 's': 1}
+    unit_order = ['d', 'h', 'm', 's']
+    
+    last_unit_index = -1
+    total_seconds = 0
+    i = 0
+    
+    while i < len(s):
+        # Parse number (must start with digit)
+        if not s[i].isdigit():
+            raise ValueError(""Invalid duration string"")
+        
+        num_start = i
+        while i < len(s) and s[i].isdigit():
+            i += 1
+        
+        number = int(s[num_start:i])
+        
+        # Parse unit (must have a unit after number)
+        if i >= len(s):
+            raise ValueError(""Invalid duration string"")
+        
+        unit = s[i]
+        if unit not in units:
+            raise ValueError(""Invalid duration string"")
+        
+        # Check unit order (must be in order d, h, m, s with no repetition)
+        current_unit_index = unit_order.index(unit)
+        if current_unit_index <= last_unit_index:
+            raise ValueError(""Invalid duration string"")
+        
+        last_unit_index = current_unit_index
+        total_seconds += number * units[unit]
+        
+        i += 1
+    
+    return total_seconds
+"
+t06_english,medium,baseline,0,True,1,,,"def int_to_english(n: int) -> str:
+    """"""Convert an integer to English words.""""""
+    if n < 0 or n > 999_999_999:
+        raise ValueError(""n must be in range 0 <= n <= 999_999_999"")
+    
+    if n == 0:
+        return ""zero""
+    
+    ones = [""zero"", ""one"", ""two"", ""three"", ""four"", ""five"", ""six"", ""seven"", ""eight"", ""nine""]
+    teens = [""ten"", ""eleven"", ""twelve"", ""thirteen"", ""fourteen"", ""fifteen"",
+             ""sixteen"", ""seventeen"", ""eighteen"", ""nineteen""]
+    tens = ["""", """", ""twenty"", ""thirty"", ""forty"", ""fifty"", ""sixty"", ""seventy"", ""eighty"", ""ninety""]
+    
+    def convert_below_thousand(num):
+        """"""Convert a number 0-999 to words.""""""
+        if num == 0:
+            return """"
+        
+        parts = []
+        
+        # Hundreds place
+        if num >= 100:
+            parts.append(ones[num // 100])
+            parts.append(""hundred"")
+            num %= 100
+        
+        # Tens and ones place
+        if num >= 20:
+            tens_digit = num // 10
+            ones_digit = num % 10
+            if ones_digit == 0:
+                parts.append(tens[tens_digit])
+            else:
+                parts.append(tens[tens_digit] + ""-"" + ones[ones_digit])
+        elif num >= 10:
+            parts.append(teens[num - 10])
+        elif num > 0:
+            parts.append(ones[num])
+        
+        return "" "".join(parts)
+    
+    # Split number into groups of three
+    millions = n // 1_000_000
+    thousands = (n % 1_000_000) // 1_000
+    remainder = n % 1_000
+    
+    parts = []
+    
+    if millions > 0:
+        parts.append(convert_below_thousand(millions))
+        parts.append(""million"")
+    
+    if thousands > 0:
+        parts.append(convert_below_thousand(thousands))
+        parts.append(""thousand"")
+    
+    if remainder > 0:
+        parts.append(convert_below_thousand(remainder))
+    
+    return "" "".join(parts)
+"
+t06_english,medium,baseline,1,True,1,,,"def int_to_english(n: int) -> str:
+    """"""Convert an integer (0 to 999,999,999) to English words.""""""
+    
+    # Validate input
+    if not isinstance(n, int) or n < 0 or n > 999_999_999:
+        raise ValueError(""n must be an integer between 0 and 999,999,999"")
+    
+    if n == 0:
+        return ""zero""
+    
+    # Word mappings
+    ones = ["""", ""one"", ""two"", ""three"", ""four"", ""five"", ""six"", ""seven"", ""eight"", ""nine""]
+    teens = [""ten"", ""eleven"", ""twelve"", ""thirteen"", ""fourteen"", ""fifteen"", 
+             ""sixteen"", ""seventeen"", ""eighteen"", ""nineteen""]
+    tens = ["""", """", ""twenty"", ""thirty"", ""forty"", ""fifty"", ""sixty"", ""seventy"", ""eighty"", ""ninety""]
+    
+    def convert_hundreds(num):
+        """"""Convert a number 0-999 to words.""""""
+        result = []
+        
+        # Handle hundreds place
+        if num >= 100:
+            result.append(ones[num // 100])
+            result.append(""hundred"")
+            num %= 100
+        
+        # Handle tens and ones
+        if num >= 20:
+            tens_digit = num // 10
+            ones_digit = num % 10
+            if ones_digit == 0:
+                result.append(tens[tens_digit])
+            else:
+                result.append(tens[tens_digit] + ""-"" + ones[ones_digit])
+        elif num >= 10:
+            result.append(teens[num - 10])
+        elif num > 0:
+            result.append(ones[num])
+        
+        return result
+    
+    result = []
+    
+    # Handle millions
+    if n >= 1_000_000:
+        millions = n // 1_000_000
+        result.extend(convert_hundreds(millions))
+        result.append(""million"")
+        n %= 1_000_000
+    
+    # Handle thousands
+    if n >= 1_000:
+        thousands = n // 1_000
+        result.extend(convert_hundreds(thousands))
+        result.append(""thousand"")
+        n %= 1_000
+    
+    # Handle remaining (hundreds and below)
+    if n > 0:
+        result.extend(convert_hundreds(n))
+    
+    return "" "".join(result)
+"
+t06_english,medium,baseline,2,True,1,,,"def int_to_english(n: int) -> str:
+    # Validate input
+    if not isinstance(n, int) or n < 0 or n > 999_999_999:
+        raise ValueError(""n must be in the range 0 <= n <= 999_999_999"")
+    
+    if n == 0:
+        return ""zero""
+    
+    # Define word mappings
+    ones = ["""", ""one"", ""two"", ""three"", ""four"", ""five"", ""six"", ""seven"", ""eight"", ""nine""]
+    teens = [""ten"", ""eleven"", ""twelve"", ""thirteen"", ""fourteen"", ""fifteen"", 
+             ""sixteen"", ""seventeen"", ""eighteen"", ""nineteen""]
+    tens = ["""", """", ""twenty"", ""thirty"", ""forty"", ""fifty"", ""sixty"", ""seventy"", ""eighty"", ""ninety""]
+    
+    def convert_under_thousand(num):
+        """"""Convert a number 0-999 to words.""""""
+        result = []
+        
+        # Hundreds place
+        if num >= 100:
+            result.append(ones[num // 100])
+            result.append(""hundred"")
+            num %= 100
+        
+        # Tens and ones place
+        if num >= 20:
+            tens_digit = num // 10
+            ones_digit = num % 10
+            if ones_digit == 0:
+                result.append(tens[tens_digit])
+            else:
+                result.append(tens[tens_digit] + ""-"" + ones[ones_digit])
+        elif num >= 10:
+            result.append(teens[num - 10])
+        elif num > 0:
+            result.append(ones[num])
+        
+        return result
+    
+    # Build the full number
+    result = []
+    
+    # Millions
+    millions = n // 1_000_000
+    if millions > 0:
+        result.extend(convert_under_thousand(millions))
+        result.append(""million"")
+    
+    # Thousands
+    thousands = (n % 1_000_000) // 1_000
+    if thousands > 0:
+        result.extend(convert_under_thousand(thousands))
+        result.append(""thousand"")
+    
+    # Ones (remaining)
+    ones_part = n % 1_000
+    if ones_part > 0:
+        result.extend(convert_under_thousand(ones_part))
+    
+    return "" "".join(result)
+"
+t06_english,medium,harness,0,True,1,,,"def int_to_english(n: int) -> str:
+    """"""Convert an integer to English words.
+    
+    Args:
+        n: Integer in range 0 <= n <= 999_999_999
+        
+    Returns:
+        String representation of the number in English words
+        
+    Raises:
+        ValueError: If n is outside the valid range
+    """"""
+    # Check range
+    if n < 0 or n > 999_999_999:
+        raise ValueError(""n must be in range 0 <= n <= 999_999_999"")
+    
+    # Special case for zero
+    if n == 0:
+        return ""zero""
+    
+    ones_names = ["""", ""one"", ""two"", ""three"", ""four"", ""five"", ""six"", ""seven"", ""eight"", ""nine""]
+    teens_names = [""ten"", ""eleven"", ""twelve"", ""thirteen"", ""fourteen"", ""fifteen"", 
+                   ""sixteen"", ""seventeen"", ""eighteen"", ""nineteen""]
+    tens_names = ["""", """", ""twenty"", ""thirty"", ""forty"", ""fifty"", ""sixty"", ""seventy"", ""eighty"", ""ninety""]
+    
+    def convert_hundreds(num):
+        """"""Convert a number 0-999 to words.""""""
+        if num == 0:
+            return """"
+        
+        result = []
+        
+        # Hundreds place
+        hundreds_digit = num // 100
+        if hundreds_digit > 0:
+            result.append(ones_names[hundreds_digit])
+            result.append(""hundred"")
+        
+        # Tens and ones place
+        remainder = num % 100
+        if remainder >= 20:
+            tens_digit = remainder // 10
+            ones_digit = remainder % 10
+            if ones_digit > 0:
+                result.append(tens_names[tens_digit] + ""-"" + ones_names[ones_digit])
+            else:
+                result.append(tens_names[tens_digit])
+        elif remainder >= 10:
+            result.append(teens_names[remainder - 10])
+        elif remainder > 0:
+            result.append(ones_names[remainder])
+        
+        return "" "".join(result)
+    
+    # Process millions, thousands, ones
+    parts = []
+    
+    # Millions
+    millions = n // 1_000_000
+    if millions > 0:
+        parts.append(convert_hundreds(millions))
+        parts.append(""million"")
+    
+    # Thousands
+    thousands = (n // 1_000) % 1_000
+    if thousands > 0:
+        parts.append(convert_hundreds(thousands))
+        parts.append(""thousand"")
+    
+    # Ones
+    ones = n % 1_000
+    if ones > 0:
+        parts.append(convert_hundreds(ones))
+    
+    return "" "".join(parts)
+"
+t06_english,medium,harness,1,True,1,,,"def int_to_english(n: int) -> str:
+    # Validate input
+    if isinstance(n, bool) or not isinstance(n, int) or n < 0 or n > 999_999_999:
+        raise ValueError(""n must be an integer in the range 0 <= n <= 999_999_999"")
+    
+    # Special case for zero
+    if n == 0:
+        return ""zero""
+    
+    # Define word mappings
+    ones = ["""", ""one"", ""two"", ""three"", ""four"", ""five"", ""six"", ""seven"", ""eight"", ""nine"",
+            ""ten"", ""eleven"", ""twelve"", ""thirteen"", ""fourteen"", ""fifteen"", ""sixteen"",
+            ""seventeen"", ""eighteen"", ""nineteen""]
+    
+    tens = ["""", """", ""twenty"", ""thirty"", ""forty"", ""fifty"", ""sixty"", ""seventy"", ""eighty"", ""ninety""]
+    
+    scales = ["""", ""thousand"", ""million""]
+    
+    def convert_below_thousand(num):
+        """"""Convert a number below 1000 to words""""""
+        if num == 0:
+            return """"
+        elif num < 20:
+            return ones[num]
+        elif num < 100:
+            ten_digit = num // 10
+            one_digit = num % 10
+            if one_digit == 0:
+                return tens[ten_digit]
+            else:
+                return tens[ten_digit] + ""-"" + ones[one_digit]
+        else:
+            hundred_digit = num // 100
+            remainder = num % 100
+            result = ones[hundred_digit] + "" hundred""
+            if remainder > 0:
+                result += "" "" + convert_below_thousand(remainder)
+            return result
+    
+    # Break the number into groups of three digits
+    groups = []
+    while n > 0:
+        groups.append(n % 1000)
+        n //= 1000
+    
+    # Convert each group and add scale words
+    result_parts = []
+    for i in range(len(groups) - 1, -1, -1):
+        if groups[i] > 0:
+            group_word = convert_below_thousand(groups[i])
+            if i > 0:
+                group_word += "" "" + scales[i]
+            result_parts.append(group_word)
+    
+    return "" "".join(result_parts)
+"
+t06_english,medium,harness,2,True,1,,,"def int_to_english(n: int) -> str:
+    """"""
+    Convert an integer to English words.
+    
+    Args:
+        n: Integer in range 0 <= n <= 999_999_999
+    
+    Returns:
+        English representation of the number in lowercase
+        
+    Raises:
+        ValueError: If n is outside the valid range or not an integer
+    """"""
+    # Validate input (check bool first since bool is subclass of int)
+    if isinstance(n, bool) or not isinstance(n, int) or n < 0 or n > 999_999_999:
+        raise ValueError(f""n must be in range 0 <= n <= 999_999_999"")
+    
+    # Special case for zero
+    if n == 0:
+        return ""zero""
+    
+    # Define word mappings
+    ones = ["""", ""one"", ""two"", ""three"", ""four"", ""five"", ""six"", ""seven"", ""eight"", ""nine"",
+            ""ten"", ""eleven"", ""twelve"", ""thirteen"", ""fourteen"", ""fifteen"", ""sixteen"",
+            ""seventeen"", ""eighteen"", ""nineteen""]
+    
+    tens = ["""", """", ""twenty"", ""thirty"", ""forty"", ""fifty"", ""sixty"", ""seventy"", ""eighty"", ""ninety""]
+    
+    scales = ["""", ""thousand"", ""million""]
+    
+    def convert_below_thousand(num):
+        """"""Convert a number below 1000 to words""""""
+        result = []
+        
+        # Hundreds place
+        if num >= 100:
+            result.append(ones[num // 100])
+            result.append(""hundred"")
+            num %= 100
+        
+        # Tens and ones place
+        if num >= 20:
+            tens_digit = num // 10
+            ones_digit = num % 10
+            if ones_digit == 0:
+                result.append(tens[tens_digit])
+            else:
+                result.append(tens[tens_digit] + ""-"" + ones[ones_digit])
+        elif num > 0:
+            result.append(ones[num])
+        
+        return result
+    
+    # Split number into groups of three digits (ones, thousands, millions)
+    groups = []
+    while n > 0:
+        groups.append(n % 1000)
+        n //= 1000
+    
+    # Convert each group and add scale words
+    result = []
+    for i in range(len(groups) - 1, -1, -1):
+        if groups[i] > 0:
+            group_words = convert_below_thousand(groups[i])
+            result.extend(group_words)
+            if i > 0:  # Add scale word (thousand, million) if not in ones place
+                result.append(scales[i])
+    
+    return "" "".join(result)
+"
+t07_rpn,medium,baseline,0,True,1,,,"def eval_rpn(tokens: list[str]) -> int:
+    """"""
+    Evaluates an integer expression in Reverse Polish Notation.
+    
+    - Operators are +, -, *, /
+    - Division truncates toward zero (not floor division)
+    - Uses pure integer arithmetic for exact results with arbitrary precision
+    """"""
+    stack = []
+    operators = {'+', '-', '*', '/'}
+    
+    for token in tokens:
+        if token in operators:
+            # Pop two operands (right operand first, then left operand)
+            b = stack.pop()
+            a = stack.pop()
+            
+            if token == '+':
+                result = a + b
+            elif token == '-':
+                result = a - b
+            elif token == '*':
+                result = a * b
+            else:  # token == '/'
+                # Integer division truncating toward zero
+                # Python's // is floor division, so we need to adjust
+                # when operands have different signs and there's a remainder
+                result = a // b
+                if (a < 0) ^ (b < 0) and a % b != 0:
+                    result += 1
+            
+            stack.append(result)
+        else:
+            # Token is a number (possibly negative)
+            stack.append(int(token))
+    
+    return stack[0]
+"
+t07_rpn,medium,baseline,1,True,1,,,"def eval_rpn(tokens: list[str]) -> int:
+    stack = []
+    operators = {'+', '-', '*', '/'}
+    
+    for token in tokens:
+        if token in operators:
+            # Pop two operands (right operand first, then left operand)
+            right = stack.pop()
+            left = stack.pop()
+            
+            if token == '+':
+                result = left + right
+            elif token == '-':
+                result = left - right
+            elif token == '*':
+                result = left * right
+            else:  # token == '/'
+                # Integer division toward zero (not toward negative infinity)
+                # Python's // truncates toward negative infinity, so we adjust
+                q = left // right
+                # If there's a remainder and signs differ, adjust toward zero
+                if (left % right != 0) and ((left < 0) != (right < 0)):
+                    q += 1
+                result = q
+            
+            stack.append(result)
+        else:
+            # It's a number token
+            stack.append(int(token))
+    
+    return stack[0]
+"
+t07_rpn,medium,baseline,2,False,1,wrong answer,"FAIL eval_rpn(['123456789012345678901', '1', '/']): expected 123456789012345678901, got 123456789012345683968
+FAIL eval_rpn(['-123456789012345678901', '10', '/']): expected -12345678901234567890, got -12345678901234567168
+10/12 test cases passed","def eval_rpn(tokens: list[str]) -> int:
+    stack = []
+    operators = {'+', '-', '*', '/'}
+    
+    for token in tokens:
+        if token in operators:
+            # Pop right operand first, then left (stack order matters)
+            right = stack.pop()
+            left = stack.pop()
+            
+            if token == '+':
+                result = left + right
+            elif token == '-':
+                result = left - right
+            elif token == '*':
+                result = left * right
+            else:  # token == '/'
+                # int(a/b) truncates toward zero (like C/Java)
+                result = int(left / right)
+            
+            stack.append(result)
+        else:
+            # Parse as integer (handles negative numbers like ""-11"")
+            stack.append(int(token))
+    
+    return stack[0]
+"
+t07_rpn,medium,harness,0,True,1,,,"def eval_rpn(tokens: list[str]) -> int:
+    """"""
+    Evaluates an integer expression in Reverse Polish Notation.
+    
+    In RPN, operators come after operands. We use a stack:
+    - Push numbers onto the stack
+    - When we see an operator, pop two operands, apply the operation,
+      and push the result back
+    
+    For division, we truncate toward zero (not toward negative infinity),
+    which is different from Python's // operator.
+    """"""
+    stack = []
+    operators = {'+', '-', '*', '/'}
+    
+    for token in tokens:
+        if token in operators:
+            # Pop two operands (right operand is on top)
+            right = stack.pop()
+            left = stack.pop()
+            
+            if token == '+':
+                result = left + right
+            elif token == '-':
+                result = left - right
+            elif token == '*':
+                result = left * right
+            else:  # token == '/'
+                # Integer division truncating toward zero
+                # Python's // truncates toward negative infinity,
+                # but we need truncation toward zero.
+                result = left // right
+                # Adjust if signs differ and there's a remainder
+                if (left < 0) != (right < 0) and left % right != 0:
+                    result += 1
+            
+            stack.append(result)
+        else:
+            # It's a number (possibly negative)
+            stack.append(int(token))
+    
+    return stack[0]
+"
+t07_rpn,medium,harness,1,True,2,,"FAIL eval_rpn(['123456789012345678901', '1', '/']): expected 123456789012345678901, got 123456789012345683968
+FAIL eval_rpn(['-123456789012345678901', '10', '/']): expected -12345678901234567890, got -12345678901234567168
+10/12 test cases passed","def eval_rpn(tokens: list[str]) -> int:
+    """"""
+    Evaluates an integer expression in Reverse Polish Notation (RPN).
+    
+    In RPN, operands come before operators. We use a stack to process tokens:
+    - Numbers are pushed onto the stack
+    - Operators pop the two most recent operands, apply the operation, and push the result
+    
+    Args:
+        tokens: List of operator strings (""+"", ""-"", ""*"", ""/"") and integer literals
+        
+    Returns:
+        The integer result of the RPN expression
+    """"""
+    stack = []
+    
+    for token in tokens:
+        if token in ""+-*/"":
+            # Pop two operands (right operand first, then left operand)
+            b = stack.pop()
+            a = stack.pop()
+            
+            # Apply the operator
+            if token == ""+"":
+                result = a + b
+            elif token == ""-"":
+                result = a - b
+            elif token == ""*"":
+                result = a * b
+            else:  # token == ""/""
+                # Integer division that truncates toward zero (like C/Java)
+                # Python's // truncates toward negative infinity, so we adjust
+                # when signs differ and there's a remainder
+                result = a // b
+                if (a * b < 0) and (a % b != 0):
+                    result += 1
+            
+            stack.append(result)
+        else:
+            # It's a number (possibly negative)
+            stack.append(int(token))
+    
+    return stack[0]
+"
+t07_rpn,medium,harness,2,True,1,,,"def eval_rpn(tokens: list[str]) -> int:
+    """"""
+    Evaluate an expression in Reverse Polish Notation.
+    
+    RPN is a postfix notation where operators come after operands.
+    Uses a stack-based approach:
+    - Push numbers onto the stack
+    - On operators, pop two operands, compute, and push result
+    
+    Division truncates toward zero (like C/Java), not toward negative infinity.
+    """"""
+    stack = []
+    
+    def truncate_divide(a, b):
+        """"""Perform integer division that truncates toward zero.""""""
+        # Floor division
+        q = a // b
+        # In Python, a//b floors toward negative infinity.
+        # We need to adjust if signs differ and there's a remainder.
+        if (a < 0) != (b < 0) and a % b != 0:
+            q += 1
+        return q
+    
+    for token in tokens:
+        if token in ('+', '-', '*', '/'):
+            # Pop operands: right is popped first, left is popped second
+            # (left is the earlier pushed value, so it's the first operand)
+            right = stack.pop()
+            left = stack.pop()
+            
+            if token == '+':
+                result = left + right
+            elif token == '-':
+                result = left - right
+            elif token == '*':
+                result = left * right
+            else:  # token == '/'
+                result = truncate_divide(left, right)
+            
+            stack.append(result)
+        else:
+            # Token is a number (could be negative like ""-11"")
+            stack.append(int(token))
+    
+    # Return the final result
+    return stack[0]
+"
+t08_versions,easy,baseline,0,True,1,,,"def compare_versions(a: str, b: str) -> int:
+    """"""
+    Compare two version strings component by component, numerically.
+    
+    - Leading zeros are ignored (1.01 == 1.1)
+    - Missing components are treated as 0 (1.0 == 1 == 1.0.0)
+    
+    Returns: -1 if a < b, 1 if a > b, 0 if equal
+    """"""
+    # Split versions into components and convert to integers
+    a_parts = [int(x) for x in a.split('.')]
+    b_parts = [int(x) for x in b.split('.')]
+    
+    # Pad the shorter version with zeros
+    max_len = max(len(a_parts), len(b_parts))
+    a_parts.extend([0] * (max_len - len(a_parts)))
+    b_parts.extend([0] * (max_len - len(b_parts)))
+    
+    # Compare component by component
+    for a_num, b_num in zip(a_parts, b_parts):
+        if a_num < b_num:
+            return -1
+        elif a_num > b_num:
+            return 1
+    
+    return 0
+"
+t08_versions,easy,baseline,1,True,1,,,"def compare_versions(a: str, b: str) -> int:
+    """"""
+    Compare two version strings numerically.
+    
+    A version string is one or more non-negative integers separated by dots.
+    Comparison is done component by component from left to right.
+    Leading zeros are ignored and missing components count as 0.
+    
+    Args:
+        a: First version string (e.g., ""1.10.3"")
+        b: Second version string (e.g., ""1.9.5"")
+    
+    Returns:
+        -1 if a < b
+        1 if a > b
+        0 if a == b
+    """"""
+    # Split version strings and convert components to integers
+    a_parts = [int(x) for x in a.split('.')]
+    b_parts = [int(x) for x in b.split('.')]
+    
+    # Pad with zeros to match lengths (handles missing components)
+    max_len = max(len(a_parts), len(b_parts))
+    a_parts += [0] * (max_len - len(a_parts))
+    b_parts += [0] * (max_len - len(b_parts))
+    
+    # Compare lexicographically (element-by-element comparison)
+    if a_parts < b_parts:
+        return -1
+    elif a_parts > b_parts:
+        return 1
+    else:
+        return 0
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert compare_versions(""1.10"", ""1.9"") == 1
+    assert compare_versions(""1.0"", ""1.0.0"") == 0
+    assert compare_versions(""1.01"", ""1.1"") == 0
+    assert compare_versions(""1"", ""1.0"") == 0
+    assert compare_versions(""1.0"", ""1.1"") == -1
+    assert compare_versions(""2.0"", ""1.9"") == 1
+    assert compare_versions(""1.0.0"", ""1.0.0"") == 0
+    print(""All tests passed!"")
+"
+t08_versions,easy,baseline,2,True,1,,,"def compare_versions(a: str, b: str) -> int:
+    """"""
+    Compare two version strings numerically, component by component.
+    
+    Args:
+        a: First version string (e.g., ""1.10.3"")
+        b: Second version string (e.g., ""1.9.0"")
+    
+    Returns:
+        -1 if a < b, 1 if a > b, 0 if a == b
+    """"""
+    # Split versions into components and convert to integers
+    a_parts = [int(x) for x in a.split('.')]
+    b_parts = [int(x) for x in b.split('.')]
+    
+    # Pad the shorter list with 0s to make them the same length
+    max_len = max(len(a_parts), len(b_parts))
+    a_parts.extend([0] * (max_len - len(a_parts)))
+    b_parts.extend([0] * (max_len - len(b_parts)))
+    
+    # Compare component by component from left to right
+    for a_val, b_val in zip(a_parts, b_parts):
+        if a_val < b_val:
+            return -1
+        elif a_val > b_val:
+            return 1
+    
+    return 0
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert compare_versions(""1.10"", ""1.9"") == 1
+    assert compare_versions(""1.0"", ""1.0.0"") == 0
+    assert compare_versions(""1.9"", ""1.10"") == -1
+    assert compare_versions(""1"", ""1.0"") == 0
+    assert compare_versions(""1.01"", ""1.1"") == 0
+    assert compare_versions(""1.0.1"", ""1.0"") == 1
+    assert compare_versions(""0.0.0"", ""0.0.1"") == -1
+    print(""All tests passed!"")
+"
+t08_versions,easy,harness,0,True,1,,,"def compare_versions(a: str, b: str) -> int:
+    """"""
+    Compare two version strings component by component, numerically.
+    
+    - Leading zeros do not matter (e.g., ""1.01"" equals ""1.1"")
+    - Missing components count as 0 (e.g., ""1.0"" equals ""1.0.0"")
+    
+    Returns:
+        -1 if a < b
+         1 if a > b
+         0 if a == b
+    """"""
+    # Split versions by dots and convert each component to integer
+    a_parts = [int(x) for x in a.split('.')]
+    b_parts = [int(x) for x in b.split('.')]
+    
+    # Pad the shorter list with zeros to make them equal length
+    max_len = max(len(a_parts), len(b_parts))
+    a_parts.extend([0] * (max_len - len(a_parts)))
+    b_parts.extend([0] * (max_len - len(b_parts)))
+    
+    # Compare component by component
+    for a_part, b_part in zip(a_parts, b_parts):
+        if a_part < b_part:
+            return -1
+        elif a_part > b_part:
+            return 1
+    
+    return 0
+"
+t08_versions,easy,harness,1,True,1,,,"def compare_versions(a: str, b: str) -> int:
+    """"""
+    Compare two version strings numerically, component by component.
+    
+    - Leading zeros are ignored (numeric comparison)
+    - Missing components are treated as 0
+    
+    Returns:
+        -1 if a < b
+        1 if a > b
+        0 if a == b
+    """"""
+    # Split version strings by dots and convert each component to int
+    a_parts = [int(x) for x in a.split('.')]
+    b_parts = [int(x) for x in b.split('.')]
+    
+    # Pad the shorter list with zeros
+    max_len = max(len(a_parts), len(b_parts))
+    a_parts.extend([0] * (max_len - len(a_parts)))
+    b_parts.extend([0] * (max_len - len(b_parts)))
+    
+    # Compare component by component
+    for a_val, b_val in zip(a_parts, b_parts):
+        if a_val < b_val:
+            return -1
+        elif a_val > b_val:
+            return 1
+    
+    # All components are equal
+    return 0
+"
+t08_versions,easy,harness,2,True,1,,,"def compare_versions(a: str, b: str) -> int:
+    """"""
+    Compare two version strings component by component, numerically.
+    
+    Args:
+        a: First version string (e.g., ""1.10.3"")
+        b: Second version string (e.g., ""1.9.2"")
+    
+    Returns:
+        -1 if a < b, 1 if a > b, 0 if a == b
+    """"""
+    # Split version strings into integer components
+    a_parts = list(map(int, a.split('.')))
+    b_parts = list(map(int, b.split('.')))
+    
+    # Pad the shorter list with zeros to make them equal length
+    max_len = max(len(a_parts), len(b_parts))
+    a_parts.extend([0] * (max_len - len(a_parts)))
+    b_parts.extend([0] * (max_len - len(b_parts)))
+    
+    # Compare component by component
+    for a_comp, b_comp in zip(a_parts, b_parts):
+        if a_comp < b_comp:
+            return -1
+        elif a_comp > b_comp:
+            return 1
+    
+    # All components are equal
+    return 0
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert compare_versions(""1.10"", ""1.9"") == 1
+    assert compare_versions(""1.0"", ""1.0.0"") == 0
+    assert compare_versions(""1.01"", ""1.1"") == 0
+    assert compare_versions(""1.0"", ""1"") == 0
+    assert compare_versions(""1.2.3"", ""1.2.3"") == 0
+    assert compare_versions(""1"", ""1.1"") == -1
+    assert compare_versions(""2.0"", ""1.9.9.9"") == 1
+    print(""All tests passed!"")
+"
+t09_snake,medium,baseline,0,True,1,,,"def camel_to_snake(name: str) -> str:
+    result = []
+    
+    for i, char in enumerate(name):
+        if char.isupper():
+            if i > 0:
+                prev_char = name[i - 1]
+                # Rule 1: insert before uppercase if preceded by lowercase or digit
+                if prev_char.islower() or prev_char.isdigit():
+                    result.append('_')
+                # Rule 2: insert before uppercase if it's the last of an uppercase run
+                # and is followed by lowercase
+                elif prev_char.isupper() and i + 1 < len(name) and name[i + 1].islower():
+                    result.append('_')
+        
+        result.append(char.lower())
+    
+    return ''.join(result)
+"
+t09_snake,medium,baseline,1,True,1,,,"def camel_to_snake(name: str) -> str:
+    result = []
+    
+    for i, char in enumerate(name):
+        if char.isupper():
+            # Check if we need to insert underscore before this uppercase letter
+            if i > 0:
+                prev_char = name[i - 1]
+                # Rule 1: lowercase or digit followed by uppercase
+                if prev_char.islower() or prev_char.isdigit():
+                    result.append('_')
+                # Rule 2: inside a run of uppercase letters,
+                # insert before last uppercase when followed by lowercase
+                elif prev_char.isupper():
+                    if i + 1 < len(name) and name[i + 1].islower():
+                        result.append('_')
+            
+            result.append(char.lower())
+        else:
+            result.append(char)
+    
+    return ''.join(result)
+
+
+# Test cases
+if __name__ == ""__main__"":
+    assert camel_to_snake(""getHTTPResponseCode"") == ""get_http_response_code""
+    assert camel_to_snake(""HTML5Parser"") == ""html5_parser""
+    assert camel_to_snake(""ABC"") == ""abc""
+    assert camel_to_snake(""camelCase"") == ""camel_case""
+    assert camel_to_snake(""version2Update"") == ""version2_update""
+    assert camel_to_snake(""HTTPServer"") == ""http_server""
+    assert camel_to_snake(""get_response"") == ""get_response""
+    print(""All tests passed!"")
+"
+t09_snake,medium,baseline,2,True,1,,,"def camel_to_snake(name: str) -> str:
+    """"""
+    Convert camelCase or PascalCase identifier to snake_case.
+    
+    Inserts underscores:
+    1. Between a lowercase letter/digit and an uppercase letter
+    2. Inside uppercase runs, before the last uppercase letter when followed by lowercase
+    
+    Then converts to lowercase.
+    """"""
+    result = []
+    
+    for i, char in enumerate(name):
+        if char.isupper():
+            # Rule 1: Insert before uppercase if preceded by lowercase or digit
+            if i > 0 and (name[i-1].islower() or name[i-1].isdigit()):
+                result.append('_')
+            # Rule 2: Insert before uppercase if preceded by uppercase and followed by lowercase
+            # (marks the last uppercase letter in a run before a lowercase letter)
+            elif i > 0 and name[i-1].isupper() and i < len(name) - 1 and name[i+1].islower():
+                result.append('_')
+        
+        result.append(char.lower())
+    
+    return ''.join(result)
+
+
+# Test cases
+if __name__ == ""__main__"":
+    test_cases = [
+        (""camelCase"", ""camel_case""),
+        (""version2Update"", ""version2_update""),
+        (""HTTPServer"", ""http_server""),
+        (""getHTTPResponseCode"", ""get_http_response_code""),
+        (""HTML5Parser"", ""html5_parser""),
+        (""ABC"", ""abc""),
+        (""snake_case"", ""snake_case""),
+        (""A"", ""a""),
+        (""IOError"", ""io_error""),
+    ]
+    
+    for input_str, expected in test_cases:
+        result = camel_to_snake(input_str)
+        status = ""✓"" if result == expected else ""✗""
+        print(f""{status} camel_to_snake('{input_str}') = '{result}' (expected '{expected}')"")
+"
+t09_snake,medium,harness,0,True,1,,,"def camel_to_snake(name: str) -> str:
+    """"""
+    Convert camelCase or PascalCase identifier to snake_case.
+    
+    Inserts underscores:
+    1. Between a lowercase letter/digit and an uppercase letter
+    2. Inside uppercase runs, before the last uppercase letter if followed by lowercase
+    Then converts to lowercase.
+    """"""
+    result = []
+    for i, char in enumerate(name):
+        # Rule 1: Insert underscore between lowercase/digit and uppercase letter
+        if i > 0 and (name[i-1].islower() or name[i-1].isdigit()) and char.isupper():
+            result.append('_')
+        
+        # Rule 2: Inside uppercase run, insert underscore before the last uppercase letter
+        # if it's followed by a lowercase letter (e.g., ""HTTPServer"" -> ""HTTP_Server"")
+        if (i > 0 and char.isupper() and name[i-1].isupper() and 
+            i + 1 < len(name) and name[i+1].islower()):
+            result.append('_')
+        
+        result.append(char.lower())
+    
+    return ''.join(result)
+"
+t09_snake,medium,harness,1,True,1,,,"def camel_to_snake(name: str) -> str:
+    result = []
+    
+    for i, char in enumerate(name):
+        if char.isupper():
+            if i > 0:
+                prev = name[i-1]
+                # Rule 1: lowercase or digit before uppercase
+                # Rule 2: uppercase before uppercase followed by lowercase
+                if (prev.islower() or prev.isdigit() or 
+                    (prev.isupper() and i + 1 < len(name) and name[i+1].islower())):
+                    result.append('_')
+        
+        result.append(char.lower())
+    
+    return ''.join(result)
+"
+t09_snake,medium,harness,2,True,1,,,"def camel_to_snake(name: str) -> str:
+    """"""
+    Convert camelCase or PascalCase identifiers to snake_case.
+    
+    Rules:
+    1. Insert underscore between lowercase/digit and following uppercase letter
+    2. Insert underscore before the last uppercase letter in a run when followed by lowercase
+       (keeps acronyms together)
+    3. Convert result to lowercase
+    4. No leading underscores or extra underscores
+    
+    Examples:
+        camel_to_snake(""getHTTPResponseCode"") -> ""get_http_response_code""
+        camel_to_snake(""HTML5Parser"") -> ""html5_parser""
+        camel_to_snake(""ABC"") -> ""abc""
+    """"""
+    result = []
+    
+    for i, char in enumerate(name):
+        if char.isupper():
+            should_insert_underscore = False
+            
+            if i > 0:
+                prev_char = name[i - 1]
+                
+                # Rule 1: Insert if previous character is lowercase or digit
+                if prev_char.islower() or prev_char.isdigit():
+                    should_insert_underscore = True
+                # Rule 2: Insert before last uppercase in a run when followed by lowercase
+                # (e.g., ""HTTPServer"" -> ""HTTP_Server"", not ""H_T_T_P_Server"")
+                elif prev_char.isupper() and i + 1 < len(name) and name[i + 1].islower():
+                    should_insert_underscore = True
+            
+            if should_insert_underscore:
+                result.append('_')
+            
+            result.append(char.lower())
+        else:
+            result.append(char)
+    
+    return ''.join(result)
+"
+t10_wrap,medium,baseline,0,True,1,,,"def word_wrap(text: str, width: int) -> list[str]:
+    """"""
+    Wrap text greedily into lines of maximum length width.
+    
+    Args:
+        text: The text to wrap
+        width: Maximum width of each line (width >= 1)
+    
+    Returns:
+        A list of lines, each with length <= width
+    """"""
+    words = text.split()
+    if not words:
+        return []
+    
+    lines = []
+    current_line = """"
+    
+    for word in words:
+        if len(word) <= width:
+            # Word fits within width
+            if not current_line:
+                # Start a new line with this word
+                current_line = word
+            elif len(current_line) + 1 + len(word) <= width:
+                # Add word to current line (with a space)
+                current_line += "" "" + word
+            else:
+                # Word doesn't fit, finalize current line and start a new one
+                lines.append(current_line)
+                current_line = word
+        else:
+            # Word is longer than width, need to split it
+            # First, finalize current line if not empty
+            if current_line:
+                lines.append(current_line)
+                current_line = """"
+            
+            # Split the long word into chunks of exactly width characters
+            remaining = word
+            while len(remaining) > width:
+                lines.append(remaining[:width])
+                remaining = remaining[width:]
+            
+            # The last chunk (shorter or equal to width) becomes the start of the new line
+            current_line = remaining
+    
+    # Don't forget the last line
+    if current_line:
+        lines.append(current_line)
+    
+    return lines
+"
+t10_wrap,medium,baseline,1,True,1,,,"def word_wrap(text: str, width: int) -> list[str]:
+    """"""
+    Wraps text greedily to fit within the given width.
+    
+    Builds lines from left to right, putting as many words as fit on each line
+    (with single spaces between words). Words longer than width are split into
+    pieces of exactly width characters, with the last piece potentially shorter.
+    
+    Args:
+        text: The text to wrap
+        width: The maximum width of each line (must be >= 1)
+    
+    Returns:
+        A list of wrapped lines. Empty if text is empty or contains only whitespace.
+    """"""
+    words = text.split()
+    if not words:
+        return []
+    
+    result = []
+    current_line = """"
+    
+    for word in words:
+        # Determine what the line would be if we add this word
+        if current_line:
+            test_line = current_line + "" "" + word
+        else:
+            test_line = word
+        
+        if len(test_line) <= width:
+            # Word fits on current line
+            current_line = test_line
+        else:
+            # Word doesn't fit on current line
+            if current_line:
+                # Flush the current line
+                result.append(current_line)
+                current_line = """"
+            
+            # Handle the word that doesn't fit
+            if len(word) <= width:
+                # Word fits on a new line by itself
+                current_line = word
+            else:
+                # Word is longer than width, split it up
+                remaining = word
+                while len(remaining) > width:
+                    result.append(remaining[:width])
+                    remaining = remaining[width:]
+                # Keep the last piece (which is <= width) for the current line
+                current_line = remaining
+    
+    # Flush any remaining current line
+    if current_line:
+        result.append(current_line)
+    
+    return result
+"
+t10_wrap,medium,baseline,2,True,1,,,"def word_wrap(text: str, width: int) -> list[str]:
+    words = text.split()
+    if not words:
+        return []
+    
+    lines = []
+    current_line = """"
+    
+    for word in words:
+        if len(word) <= width:
+            # Word fits within width
+            if current_line:
+                test_line = current_line + "" "" + word
+                if len(test_line) <= width:
+                    # Add word to current line
+                    current_line = test_line
+                else:
+                    # Word doesn't fit, start new line
+                    lines.append(current_line)
+                    current_line = word
+            else:
+                # Current line is empty, start with this word
+                current_line = word
+        else:
+            # Word is longer than width, need to split it
+            if current_line:
+                # Finalize current line
+                lines.append(current_line)
+                current_line = """"
+            
+            # Split the word into chunks of exactly width characters
+            i = 0
+            while i + width < len(word):
+                lines.append(word[i:i+width])
+                i += width
+            
+            # Last piece (shorter or equal to width) starts the current line
+            current_line = word[i:]
+    
+    # Don't forget the last line
+    if current_line:
+        lines.append(current_line)
+    
+    return lines
+"
+t10_wrap,medium,harness,0,True,1,,,"def word_wrap(text: str, width: int) -> list[str]:
+    """"""
+    Wraps text greedily to fit within the specified width.
+    
+    - Words are maximal runs of non-whitespace characters (via text.split())
+    - Lines are filled left to right, adding as many words as fit
+    - Words longer than width are split into chunks of exactly width characters,
+      with the final remainder (if any) starting the next line
+    - Returns empty list for empty or whitespace-only text
+    """"""
+    words = text.split()
+    if not words:
+        return []
+    
+    result = []
+    current_line = """"
+    
+    for word in words:
+        # Check if word fits on the current line
+        if current_line and len(current_line) + 1 + len(word) <= width:
+            # Word fits: add it to the current line
+            current_line += "" "" + word
+        else:
+            # Word doesn't fit: finalize current line and process the word
+            if current_line:
+                result.append(current_line)
+            
+            # Handle the word
+            if len(word) <= width:
+                # Word fits on its own line
+                current_line = word
+            else:
+                # Word is longer than width: split into chunks
+                while len(word) > width:
+                    result.append(word[:width])
+                    word = word[width:]
+                # Remainder becomes the start of the next line
+                current_line = word
+    
+    # Add the last line if it's not empty
+    if current_line:
+        result.append(current_line)
+    
+    return result
+"
+t10_wrap,medium,harness,1,True,1,,,"def word_wrap(text: str, width: int) -> list[str]:
+    words = text.split()
+    if not words:
+        return []
+    
+    lines = []
+    current_line = """"
+    
+    for word in words:
+        if len(word) <= width:
+            # Word fits within width
+            if current_line:
+                # Try to add to current line
+                if len(current_line) + 1 + len(word) <= width:
+                    current_line += "" "" + word
+                else:
+                    # Doesn't fit, save current line and start new one
+                    lines.append(current_line)
+                    current_line = word
+            else:
+                # Current line is empty, start with this word
+                current_line = word
+        else:
+            # Word is longer than width, must split it
+            if current_line:
+                lines.append(current_line)
+            
+            # Split word into width-sized pieces
+            for i in range(0, len(word), width):
+                piece = word[i:i+width]
+                if i + width < len(word):
+                    # Not the last piece, add to output
+                    lines.append(piece)
+                else:
+                    # Last piece, becomes new current line
+                    current_line = piece
+    
+    # Add any remaining content
+    if current_line:
+        lines.append(current_line)
+    
+    return lines
+"
+t10_wrap,medium,harness,2,True,1,,,"def word_wrap(text: str, width: int) -> list[str]:
+    words = text.split()
+    if not words:
+        return []
+    
+    result = []
+    current_line = """"
+    
+    for word in words:
+        if len(word) <= width:
+            # Word fits within width
+            if current_line:
+                # Check if adding this word fits on current line
+                if len(current_line) + 1 + len(word) <= width:
+                    current_line += "" "" + word
+                else:
+                    # Word doesn't fit, save current line and start new one
+                    result.append(current_line)
+                    current_line = word
+            else:
+                # Current line is empty
+                current_line = word
+        else:
+            # Word is longer than width, need to cut it
+            if current_line:
+                result.append(current_line)
+                current_line = """"
+            
+            # Cut the word into pieces of width characters
+            for i in range(0, len(word), width):
+                piece = word[i:i+width]
+                if i + width < len(word):
+                    # Not the last piece - add to result
+                    result.append(piece)
+                else:
+                    # Last piece - becomes start of current line
+                    current_line = piece
+    
+    # Add any remaining content
+    if current_line:
+        result.append(current_line)
+    
+    return result
+"

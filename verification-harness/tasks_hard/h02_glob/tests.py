@@ -1,0 +1,53 @@
+FUNCTION = "glob_match"
+DIFFICULTY = "hard"
+
+# CASES: the harness sees these. HIDDEN: held out, used only for scoring.
+CASES = [
+    (("src/*.py", "src/main.py"), True),
+    (("src/*.py", "src/lib/main.py"), False),
+    (("src/**/*.py", "src/main.py"), True),
+    (("src/**/*.py", "src/a/b/main.py"), True),
+    (("file?.txt", "file1.txt"), True),
+]
+
+HIDDEN = [
+    (("a/**/b", "a/b"), True),
+    (("a/**/b", "a/x/y/b"), True),
+    (("a/**/b", "a/x/y/c"), False),
+    (("**/b", "b"), True),
+    (("**/b", "x/y/b"), True),
+    (("**/b", "x/yb"), False),
+    (("a/**", "a"), True),
+    (("a/**", "a/x/y"), True),
+    (("a/**", "ab"), False),
+    (("**", "x/y/z"), True),
+    (("a/**/**/b", "a/b"), True),
+    (("a**b", "axxb"), True),
+    (("a**b", "ax/xb"), False),
+    (("?", "/"), False),
+    (("a?b", "a/b"), False),
+    (("*", ""), True),
+    (("*.py", ".py"), True),
+    (("[abc].txt", "b.txt"), True),
+    (("[a-c][0-9]", "c7"), True),
+    (("[a-c][0-9]", "d7"), False),
+    (("[!a-c]x", "dx"), True),
+    (("[!a-c]x", "ax"), False),
+    (("a[!x]b", "a/b"), False),
+    (("[]a]", "]"), True),
+    (("[!]a]", "]"), False),
+    (("[-a]", "-"), True),
+    (("[a-]", "-"), True),
+    (("[*?]", "?"), True),
+    (("[ab", "[ab"), True),
+    (("[ab", "a"), False),
+    (("\\*", "*"), True),
+    (("\\*", "x"), False),
+    (("a\\?c", "a?c"), True),
+    (("a\\?c", "abc"), False),
+    (("a\\", "a\\"), ValueError),
+    (("Src/*.py", "src/main.py"), False),
+    (("a.b", "axb"), False),
+    (("(a|b)", "(a|b)"), True),
+    (("a+", "aa"), False),
+]
