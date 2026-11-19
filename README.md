@@ -2,7 +2,7 @@
 
 Code for the experiments I write about at [vlrmzz.github.io/writing](https://vlrmzz.github.io/writing/).
 Each post takes a popular claim about AI and tests it with a small experiment. Each folder here holds
-one experiment: the code, the results of the full run, and a notebook.
+one experiment: the code, the results of the full run, and for most of them a notebook.
 
 | Folder | Question | Short run | Full run |
 |---|---|---|---|
@@ -10,9 +10,11 @@ one experiment: the code, the results of the full run, and a notebook.
 | [`confident-and-wrong`](confident-and-wrong/) | When can you trust the confidence a model reports? | 1 minute | 45 minutes |
 | [`nobody-told-it-what-a-noun-is`](nobody-told-it-what-a-noun-is/) | Does a model learn word classes when nobody teaches them? | 1 minute | 10 minutes |
 | [`agent-trace-failures`](agent-trace-failures/) | Can a decision model find the step where an AI agent failed? | saved results only | needs an API key |
+| [`verification-harness`](verification-harness/) | Does running the tests make a coding agent's code correct? | offline check, no model | needs an API key |
 
-Times are for a laptop CPU. No GPU is necessary. The last experiment calls a paid model, so its notebook shows the saved
-results and does not run the model again.
+Times are for a laptop CPU. No GPU is necessary. The last two experiments call paid models. The notebook of
+`agent-trace-failures` shows the saved results and does not run the model again. `verification-harness`
+has no notebook yet: every saved run is in the folder, and its README shows how to summarise them.
 
 ## Run a notebook
 
